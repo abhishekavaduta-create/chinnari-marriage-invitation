@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Noto+Serif+Telugu:wght@500;600;700&display=swap');
+
+.wedding-intro {
+  --wi-maroon: #5e1119;
+  --wi-gold: #c59b27;
+  --wi-glow: #e3a83b;
+  --wi-ivory: #fff8ed;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  overflow: hidden;
+  isolation: isolate;
+  background: #170d0b;
+  color: var(--wi-ivory);
+  font-family: 'Bodoni Moda', Georgia, serif;
+}
+.wedding-intro__temple,
+.wedding-intro__temple-fallback,
+.wedding-intro__temple-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.wedding-intro__temple { z-index: 0; overflow: hidden; }
+.wedding-intro__temple-image {
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(.9) brightness(.78);
+  animation: wi-temple-arrive 1.4s ease-out both;
+}
+.wedding-intro__temple-fallback {
+  z-index: -1;
+  background:
+    radial-gradient(ellipse at 50% 35%, rgba(210,148,54,.48), transparent 38%),
+    repeating-linear-gradient(90deg, transparent 0 12%, rgba(186,126,46,.2) 12.5% 13%, transparent 13.5% 24%),
+    linear-gradient(180deg, #21120e, #51331d 54%, #160c0b);
+}
+.wedding-intro__temple::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,4,3,.18), transparent 34%, rgba(12,5,4,.64)),
+    radial-gradient(ellipse at center, transparent 30%, rgba(8,3,3,.5) 100%);
+  pointer-events: none;
+}
+.wedding-intro__warm-light {
+  position: absolute;
+  width: min(90vw, 640px);
+  height: min(90vw, 640px);
+  top: 22%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,211,123,.31), rgba(225,159,54,.1) 35%, transparent 70%);
+  filter: blur(8px);
+  animation: wi-halo 4s ease-in-out infinite;
+}
+.wedding-intro__floor-ornament {
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(238,193,75,.52);
+  font-size: clamp(3rem, 10vw, 7rem);
+  text-shadow: 0 0 30px rgba(227,168,59,.45);
+  opacity: .62;
+}
+.wedding-intro__petals { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 4; }
+.wedding-intro__petals i {
+  --left: calc((var(--petal-index) * 13 + 6) * 1%);
+  position: absolute;
+  left: var(--left);
+  top: -24px;
+  width: 10px;
+  height: 15px;
+  border-radius: 80% 20% 70% 30%;
+  background: var(--petal-color, #d88791);
+  opacity: .72;
+  transform: rotate(calc(var(--petal-index) * 37deg));
+  animation: wi-petal calc(5.5s + var(--petal-index) * .35s) linear infinite;
+  animation-delay: calc(var(--petal-index) * -.65s);
+}
+.wedding-intro__petals i:nth-child(3n) { --petal-color: #e8b754; width: 8px; height: 12px; }
+.wedding-intro__petals i:nth-child(3n + 1) { --petal-color: #f1d5d1; }
+.wedding-intro__ganesha {
+  position: absolute;
+  z-index: 3;
+  top: 7%;
+  left: 50%;
+  width: min(76vw, 430px);
+  height: 65%;
+  transform: translateX(-50%);
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+.wedding-intro__ganesha-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 28px rgba(238,193,75,.4)) drop-shadow(0 15px 25px rgba(0,0,0,.65));
+}
+.wedding-intro__ganesha-fallback {
+  display: grid;
+  place-items: center;
+  width: 56%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(238,193,75,.75);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(238,193,75,.4), rgba(60,22,13,.25));
+  box-shadow: 0 0 70px rgba(238,193,75,.38);
+  color: #ffdf98;
+  font-size: clamp(4rem, 18vw, 9rem);
+}
+.wedding-intro__invocation {
+  position: absolute;
+  z-index: 5;
+  bottom: 12%;
+  left: 0;
+  right: 0;
+  padding: 0 16px;
+  text-align: center;
+  color: #fff1c8;
+  text-shadow: 0 2px 14px rgba(0,0,0,.9);
+}
+.wedding-intro__invocation h1 {
+  font-family: 'Noto Serif Telugu', serif;
+  font-size: clamp(1.65rem, 6.3vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.5;
+  color: #ffe3a0;
+}
+.wedding-intro__invocation p {
+  margin-top: .15rem;
+  font-size: clamp(.8rem, 2.8vw, 1.2rem);
+  letter-spacing: .18em;
+  font-weight: 600;
+  color: #fff0c9;
+}
+.wedding-intro__divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 14px auto 0;
+  width: min(240px, 70vw);
+  color: #f0c45d;
+}
+.wedding-intro__divider::before,
+.wedding-intro__divider::after {
+  content: '';
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, #d7aa47);
+}
+.wedding-intro__divider::after { transform: rotate(180deg); }
+.wedding-intro__divider span { font-size: 1rem; }
+.wedding-intro__curtain {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 56%;
+  z-index: 8;
+  overflow: hidden;
+  background-color: #390811;
+  pointer-events: none;
+}
+.wedding-intro__curtain img {
+  position: absolute;
+  top: -1%;
+  width: 180%;
+  height: 102%;
+  object-fit: cover;
+  filter: saturate(1.1) brightness(.78);
+  max-width: none;
+}
+.wedding-intro__curtain--left {
+  left: 0;
+  transform-origin: left center;
+  box-shadow: 18px 0 36px rgba(0,0,0,.6), inset -12px 0 18px rgba(197,155,39,.17);
+}
+.wedding-intro__curtain--left img { left: -35%; object-position: right center; }
+.wedding-intro__curtain--right {
+  right: 0;
+  transform-origin: right center;
+  box-shadow: -18px 0 36px rgba(0,0,0,.6), inset 12px 0 18px rgba(197,155,39,.17);
+}
+.wedding-intro__curtain--right img {
+  right: -35%;
+  object-position: left center;
+  transform: scaleX(-1);
+}
+.wedding-intro__curtain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(19,5,7,.08), rgba(22,5,8,.28) 50%, rgba(5,2,2,.4));
+}
+.wedding-intro__title {
+  position: absolute;
+  z-index: 6;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: max(28px, env(safe-area-inset-top)) 24px max(28px, env(safe-area-inset-bottom));
+  color: var(--wi-maroon);
+  background:
+    radial-gradient(ellipse at 50% 42%, rgba(255,252,244,.99), rgba(250,238,213,.92) 52%, rgba(95,50,28,.14) 100%),
+    #f8eedb;
+}
+.wedding-intro__title::before {
+  content: '';
+  position: absolute;
+  inset: 16px;
+  border: 1px solid rgba(197,155,39,.65);
+  outline: 1px solid rgba(197,155,39,.18);
+  outline-offset: 5px;
+  pointer-events: none;
+}
+.wedding-intro__namam {
+  position: relative;
+  height: 70px;
+  width: 60px;
+  margin-bottom: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  filter: drop-shadow(0 4px 8px rgba(120,72,12,.2));
+}
+.wedding-intro__namam span {
+  display: block;
+  width: 13px;
+  height: 54px;
+  border: 5px solid #b38a3c;
+  border-top: 0;
+  border-radius: 0 0 12px 12px;
+  background: rgba(255,255,255,.5);
+}
+.wedding-intro__namam b {
+  display: block;
+  width: 8px;
+  height: 62px;
+  border-radius: 8px;
+  background: #8d1c2a;
+}
+.wedding-intro__auspicious {
+  font-family: 'Noto Serif Telugu', serif;
+  font-size: clamp(.95rem, 3.2vw, 1.3rem);
+  line-height: 1.8;
+  color: #795016;
+  margin-bottom: 14px;
+}
+.wedding-intro__title h2 {
+  font-family: 'Bodoni Moda', Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(2.15rem, 7.8vw, 4.6rem);
+  line-height: 1.08;
+  letter-spacing: -.025em;
+  color: #681723;
+  text-wrap: balance;
+  max-width: 920px;
+  text-shadow: 0 1px 0 rgba(255,255,255,.65);
+}
+.wedding-intro__title h2 span { display: block; font-weight: 500; font-style: italic; font-size: .77em; margin-top: .12em; }
+.wedding-intro__title-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: min(340px, 80vw);
+  margin-top: 24px;
+  color: #a77b26;
+}
+.wedding-intro__title-divider::before,
+.wedding-intro__title-divider::after { content: ''; height: 1px; flex: 1; background: linear-gradient(90deg, transparent, #a77b26); }
+.wedding-intro__title-divider::after { transform: rotate(180deg); }
+.wedding-intro__title-divider b { font-weight: 500; font-size: 1.35rem; }
+.wedding-intro__title-divider span { font-size: 1.15rem; }
+.wedding-intro__subtitle {
+  margin-top: 18px;
+  color: #77542a;
+  font-style: italic;
+  font-size: clamp(1rem, 3vw, 1.3rem);
+}
+.wedding-intro__skip {
+  position: absolute;
+  top: max(18px, env(safe-area-inset-top));
+  right: max(18px, env(safe-area-inset-right));
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255,224,152,.7);
+  border-radius: 999px;
+  background: rgba(24,10,8,.76);
+  color: #fff4d9;
+  padding: 10px 16px;
+  min-height: 44px;
+  font: 600 14px/1.2 'Bodoni Moda', Georgia, serif;
+  box-shadow: 0 4px 18px rgba(0,0,0,.25);
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+}
+.wedding-intro__skip:hover { background: rgba(94,17,25,.95); }
+.wedding-intro__skip:focus-visible { outline: 3px solid #ffe3a0; outline-offset: 3px; }
+.wedding-intro__stage-indicator {
+  position: absolute;
+  z-index: 7;
+  left: 0;
+  right: 0;
+  bottom: max(18px, env(safe-area-inset-bottom));
+  text-align: center;
+  color: rgba(255,242,213,.7);
+  font-family: 'Noto Serif Telugu', serif;
+  font-size: 12px;
+  letter-spacing: .08em;
+  pointer-events: none;
+  text-shadow: 0 1px 8px rgba(0,0,0,.9);
+}
+@keyframes wi-temple-arrive { from { opacity: .15; transform: scale(1.025); } to { opacity: 1; transform: scale(1); } }
+@keyframes wi-halo { 0%,100% { opacity: .6; } 50% { opacity: .95; } }
+@keyframes wi-petal {
+  0% { transform: translate3d(0,-20px,0) rotate(0deg); opacity: 0; }
+  12% { opacity: .72; }
+  82% { opacity: .58; }
+  100% { transform: translate3d(32px,110vh,0) rotate(280deg); opacity: 0; }
+}
+@media (max-width: 480px) {
+  .wedding-intro__ganesha { top: 10%; width: 83vw; height: 57%; }
+  .wedding-intro__invocation { bottom: 13%; }
+  .wedding-intro__title { padding-left: 22px; padding-right: 22px; }
+  .wedding-intro__title::before { inset: 12px; outline-offset: 3px; }
+  .wedding-intro__namam { margin-bottom: 16px; }
+}
+@media (max-height: 650px) {
+  .wedding-intro__ganesha { height: 54%; top: 5%; }
+  .wedding-intro__invocation { bottom: 7%; }
+  .wedding-intro__namam { height: 48px; transform: scale(.8); margin-bottom: 10px; }
+  .wedding-intro__title h2 { font-size: clamp(1.7rem, 5vh, 3.3rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wedding-intro *,
+  .wedding-intro *::before,
+  .wedding-intro *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .wedding-intro__petals { display: none; }
+}
