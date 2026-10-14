@@ -31,7 +31,7 @@ export default function App() {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col items-center bg-[#5E1119] text-[#2D1518] relative selection:bg-[#7B1E2B] selection:text-[#FFF8EF] overflow-x-hidden">
+      <div className="min-h-screen flex flex-col items-center bg-[#5E1119] text-[#2D1518] relative selection:bg-[#7B1E2B] selection:text-[#FFF8EF] overflow-x-hidden pt-2 pb-4">
         {/* Background Petal Shower (Respects prefers-reduced-motion) */}
         <PetalShower enabled={petalsEnabled} />
 
@@ -44,7 +44,7 @@ export default function App() {
         />
 
         {/* Main Single-Column Mobile-First Container (360px - 430px ideal target) */}
-        <main className="w-full max-w-md flex-1 px-3 sm:px-4 py-4 sm:py-5 space-y-4 bg-[#FFFCF6] border-x border-[#C6A15B] shadow-[0_0_36px_rgba(0,0,0,0.18)]">
+        <main className="w-[calc(100%-24px)] max-w-md flex-1 px-3 sm:px-4 py-4 sm:py-5 space-y-4 bg-[#FFFCF6] border-x border-[#C6A15B] shadow-[0_0_36px_rgba(0,0,0,0.18)]">
           {/* Devotional Hero Section with Sri Lakshmi Narasimha Swamy */}
           <DevotionalHero 
             language={language} 
