@@ -17,12 +17,12 @@ const CURTAIN_IMAGE =
   'https://lh3.googleusercontent.com/aida/AEtjO1XnaZC1VikLw6TAk_PCoY_z19FQFu81lTC93uldzeNHJKcbaVi_AkwUOM3HveyM2uSgVnnCNal7jSJidhf7nAn5tn4-NGzy0KJApi72So6MHrI2hfKnN1vv2u3F0ODflnxKttKPKRNIRqm33DwYPIxni82jd_dXHXgz6UQRsFlQ4KphP-DhCtw8O-yqT9eOj3UI3O0n5wdUyNjCQ4WLUycNOu9NWRhwkhOsvNVy75w_IsObfUWHPK-TTio';
 
 const stages = [
-  { stage: 1, duration: 1400 }, // temple atmosphere
-  { stage: 2, duration: 1400 }, // Ganesha reveal
-  { stage: 3, duration: 1500 }, // invocation hold
-  { stage: 4, duration: 1000 }, // curtains close
-  { stage: 5, duration: 1650 }, // curtains part
-  { stage: 6, duration: 1900 }, // title reveal and hold
+  { stage: 1, duration: 2000 }, // temple atmosphere
+  { stage: 2, duration: 2500 }, // Ganesha reveal
+  { stage: 3, duration: 2400 }, // invocation reveal and devotional pause
+  { stage: 4, duration: 1500 }, // curtains close
+  { stage: 5, duration: 2300 }, // curtains part
+  { stage: 6, duration: 2800 }, // title reveal and hold
 ] as const;
 
 export function WeddingIntro({ onComplete }: WeddingIntroProps) {
@@ -103,7 +103,7 @@ export function WeddingIntro({ onComplete }: WeddingIntroProps) {
             scale: stage >= 2 && stage <= 3 ? 1 : 0.94,
             y: stage === 3 ? '-7vh' : stage === 2 ? 0 : 10,
           }}
-          transition={{ duration: 1.25, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 2.0, ease: [0.16, 1, 0.3, 1] }}
           aria-hidden={stage < 2 || stage > 3}
         >
           {!ganeshaFailed ? (
@@ -123,7 +123,7 @@ export function WeddingIntro({ onComplete }: WeddingIntroProps) {
           className="wedding-intro__invocation"
           initial={false}
           animate={{ opacity: stage === 3 ? 1 : 0, y: stage === 3 ? 0 : 12 }}
-          transition={{ duration: 0.7, ease: 'easeOut', delay: stage === 3 ? 0.18 : 0 }}
+          transition={{ duration: 1.05, ease: 'easeOut', delay: stage === 3 ? 0.3 : 0 }}
           aria-hidden={stage !== 3}
         >
           <h1 lang="te">ఓం గణేశాయ నమః</h1>
@@ -135,7 +135,7 @@ export function WeddingIntro({ onComplete }: WeddingIntroProps) {
           className="wedding-intro__curtain wedding-intro__curtain--left"
           initial={false}
           animate={{ x: stage >= 5 || stage < 4 ? '-101%' : '0%' }}
-          transition={{ duration: stage === 5 ? 1.65 : 0.95, ease: [0.25, 1, 0.5, 1] }}
+          transition={{ duration: stage === 5 ? 2.25 : 1.45, ease: [0.25, 1, 0.5, 1] }}
           aria-hidden="true"
         >
           <img src={CURTAIN_IMAGE} alt="" referrerPolicy="no-referrer" />
@@ -144,7 +144,7 @@ export function WeddingIntro({ onComplete }: WeddingIntroProps) {
           className="wedding-intro__curtain wedding-intro__curtain--right"
           initial={false}
           animate={{ x: stage >= 5 || stage < 4 ? '101%' : '0%' }}
-          transition={{ duration: stage === 5 ? 1.65 : 0.95, ease: [0.25, 1, 0.5, 1] }}
+          transition={{ duration: stage === 5 ? 2.25 : 1.45, ease: [0.25, 1, 0.5, 1] }}
           aria-hidden="true"
         >
           <img src={CURTAIN_IMAGE} alt="" referrerPolicy="no-referrer" />
@@ -158,7 +158,7 @@ export function WeddingIntro({ onComplete }: WeddingIntroProps) {
             scale: stage >= 6 && stage < 7 ? 1 : 0.97,
             y: stage >= 6 && stage < 7 ? 0 : 8,
           }}
-          transition={{ duration: 1.05, ease: [0.16, 1, 0.3, 1], delay: stage === 6 ? 0.25 : 0 }}
+          transition={{ duration: 1.55, ease: [0.16, 1, 0.3, 1], delay: stage === 6 ? 0.4 : 0 }}
           aria-hidden={stage < 6 || stage >= 7}
         >
           <div className="wedding-intro__namam" aria-hidden="true">
