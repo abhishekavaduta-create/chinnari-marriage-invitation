@@ -47,14 +47,14 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Language Selector Switch */}
         <div 
-          className="inline-flex rounded-full p-0.5 bg-[#FAF1E2] border border-[#C6A15B]" 
+          className="inline-flex rounded-full p-1 bg-[#FAF1E2] border border-[#C6A15B]" 
           role="group" 
           aria-label="Language selection"
         >
           <button
             type="button"
             onClick={() => onLanguageChange('te')}
-            className={`min-h-[32px] px-3 py-1 text-xs sm:text-sm font-extrabold rounded-full transition-all duration-200 cursor-pointer ${
+            className={`min-h-[38px] px-3.5 py-1 text-[16px] font-black rounded-full transition-all duration-200 cursor-pointer ${
               language === 'te'
                 ? 'bg-[#7B1E2B] text-white shadow-xs'
                 : 'text-[#7B1E2B] hover:text-[#58111D]'
@@ -66,7 +66,7 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             type="button"
             onClick={() => onLanguageChange('en')}
-            className={`min-h-[32px] px-3 py-1 text-xs sm:text-sm font-extrabold rounded-full transition-all duration-200 cursor-pointer ${
+            className={`min-h-[38px] px-3.5 py-1 text-[16px] font-black rounded-full transition-all duration-200 cursor-pointer ${
               language === 'en'
                 ? 'bg-[#7B1E2B] text-white shadow-xs'
                 : 'text-[#7B1E2B] hover:text-[#58111D]'

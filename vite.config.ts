@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(({ command }) => {
   return {
-    base: process.env.VITE_BASE_PATH || (command === 'serve' ? '/' : '/chinnari-marriage-invitation/'),
+    base: process.env.VITE_BASE_PATH || (process.env.GITHUB_ACTIONS === 'true' ? '/chinnari-marriage-invitation/' : '/'),
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

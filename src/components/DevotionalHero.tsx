@@ -91,43 +91,43 @@ export const DevotionalHero: React.FC<DevotionalHeroProps> = ({ language }) => {
       <NamamIcon className="w-36 h-10 mx-auto my-1" />
 
       {/* Devotional Invocations */}
-      <h1 className="text-2xl sm:text-3xl font-extrabold text-[#7B1E2B] font-telugutitle leading-snug mt-2 tracking-tight">
+      <h1 className="text-[26px] sm:text-[32px] font-black text-[#7B1E2B] font-telugutitle leading-snug mt-2 tracking-tight">
         {t.hero_invocation}
       </h1>
 
-      <p className="text-sm sm:text-base font-bold text-[#855F1B] tracking-wide my-2">
+      <p className="text-[16px] sm:text-[18px] font-bold text-[#855F1B] tracking-wide my-2">
         {t.hero_slokam}
       </p>
 
       <TraditionalDivider className="w-44 h-5 mx-auto my-2.5 opacity-90" />
 
-      <p className="text-base sm:text-lg text-[#2D1518] font-medium max-w-sm mx-auto leading-relaxed">
+      <p className="text-[18px] sm:text-[20px] text-[#2D1518] font-medium max-w-sm mx-auto leading-relaxed">
         {t.invitation_lead}
       </p>
 
       {/* Prominent Couple Typography */}
       <div className="my-5 py-1 space-y-1.5">
-        <div className="text-2xl sm:text-3xl font-black text-[#7B1E2B] tracking-wide font-telugutitle leading-normal">
+        <div className="text-[28px] sm:text-[34px] font-black text-[#7B1E2B] tracking-wide font-telugutitle leading-normal">
           {t.bride_name}
         </div>
-        <div className="text-lg sm:text-xl font-extrabold text-[#855F1B]">&amp;</div>
-        <div className="text-2xl sm:text-3xl font-black text-[#7B1E2B] tracking-wide font-telugutitle leading-normal">
+        <div className="text-[20px] sm:text-[24px] font-extrabold text-[#855F1B]">&amp;</div>
+        <div className="text-[28px] sm:text-[34px] font-black text-[#7B1E2B] tracking-wide font-telugutitle leading-normal">
           {t.groom_name}
         </div>
-        <div className="text-sm sm:text-base font-semibold text-gray-700 italic tracking-wider pt-1">
+        <div className="text-[17px] sm:text-[19px] font-semibold text-gray-700 italic tracking-wider pt-1">
           {t.ceremony_sub}
         </div>
       </div>
 
       {/* Auspicious Muhurtham Banner */}
-      <div className="rounded-xl gold-gradient-bg border-2 border-[#C6A15B] p-4 my-3.5 shadow-xs">
-        <span className="inline-block px-3.5 py-1 rounded-full bg-[#7B1E2B] text-[#F7EDD4] text-xs font-extrabold uppercase tracking-wider mb-1.5">
+      <div className="rounded-xl gold-gradient-bg border-2 border-[#C6A15B] p-4 sm:p-5 my-3.5 shadow-xs">
+        <span className="inline-block px-4 py-1.5 rounded-full bg-[#7B1E2B] text-[#F7EDD4] text-[15px] font-extrabold uppercase tracking-wider mb-2">
           {t.badge_muhurtham}
         </span>
-        <div className="text-lg sm:text-xl font-black text-[#7B1E2B] font-telugutitle leading-snug">
+        <div className="text-[22px] sm:text-[26px] font-black text-[#7B1E2B] font-telugutitle leading-snug">
           {t.hero_muhurtham_date}
         </div>
-        <div className="text-sm sm:text-base text-[#3D2214] mt-1 font-semibold">
+        <div className="text-[17px] sm:text-[19px] text-[#3D2214] mt-1.5 font-bold">
           {t.hero_muhurtham_lagna}
         </div>
       </div>
@@ -135,7 +135,7 @@ export const DevotionalHero: React.FC<DevotionalHeroProps> = ({ language }) => {
       {/* Jump Anchor Button to Muhurtham and Event Details */}
       <a
         href="#events-section"
-        className="inline-flex items-center justify-center space-x-2 w-full min-h-[48px] py-3 px-4 rounded-xl maroon-gradient-bg text-white font-bold text-sm sm:text-base shadow-sm hover:brightness-110 active:scale-[0.99] transition cursor-pointer"
+        className="inline-flex items-center justify-center space-x-2 w-full min-h-[50px] py-3.5 px-4 rounded-xl maroon-gradient-bg text-white font-bold text-[17px] sm:text-[18px] shadow-sm hover:brightness-110 active:scale-[0.99] transition cursor-pointer"
       >
         <span>{t.cta_view_details}</span>
       </a>

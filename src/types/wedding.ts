@@ -6,8 +6,17 @@ export interface CoupleAndFamily {
   brideFather: { te: string; en: string };
   brideMother: { te: string; en: string };
   groomFather: { te: string; en: string };
+  groomMother: { te: string; en: string };
   hosts: { te: string; en: string };
   hostRelation: { te: string; en: string };
+}
+
+export interface ExtendedFamilyMember {
+  id: string;
+  names: {
+    en: string;
+    te: string;
+  };
 }
 
 export type EventId = 'engagement' | 'haldi' | 'marriage';

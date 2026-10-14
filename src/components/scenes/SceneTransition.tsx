@@ -13,7 +13,7 @@ export const SceneTransition: React.FC<SceneTransitionProps> = ({ label }) => {
         <div className="flex-1 h-px bg-gradient-to-l from-transparent via-[#C6A15B] to-[#C6A15B]/40" />
       </div>
       {label && (
-        <span className="text-xs uppercase tracking-widest text-[#855F1B] font-bold">
+        <span className="text-[15px] sm:text-[16px] uppercase tracking-widest text-[#855F1B] font-black font-telugutitle">
           {label}
         </span>
       )}

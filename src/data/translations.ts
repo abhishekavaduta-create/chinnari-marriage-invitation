@@ -11,17 +11,39 @@ export const translations = {
     hero_muhurtham_date: "ఆదివారం, 15 నవంబర్ 2026 • ఉదయం 9:58 నిమిషాలకు",
     hero_muhurtham_lagna: "(వృశ్చిక లగ్న పుష్కరాంశ సుముహూర్తం)",
     cta_view_details: "ముహూర్తం & వేదిక వివరాలు ↓",
+
+    // Cordially Inviting (Family Hosts)
     label_primary_hosts: "ఆహ్వానించేవారు (కుటుంబ ప్రధాన కర్తలు)",
-    host_names: "పెద్దబొమ్మ సునీత & పెద్దబొమ్మ రాజేష్",
-    host_pinni_label: "పిన్ని – పెద్దబొమ్మ సునీత",
+    host_names: "పెద్దబొమ్మ రాజేష్ & పెద్దబొమ్మ సునీత",
     host_babai_label: "బాబాయి – పెద్దబొమ్మ రాజేష్",
-    host_relation: "(వధువు పిన్ని & బాబాయి)",
+    host_pinni_label: "పిన్ని – పెద్దబొమ్మ సునీత",
+    host_relation: "(వధువు బాబాయి & పిన్ని)",
     host_invitation_text: "మా ఇంట జరుగు మా చిరంజీవుల వివాహ మహోత్సవ శుభవేళకు తమరులు సకుటుంబ సపరివార సమేతంగా విచ్చేసి నూతన వధూవరులను మనసారా ఆశీర్వదించ ప్రార్థన.",
+
+    // Kanyadanam
+    label_kanyadanam_by: "కన్యాదాతలు (కన్యాదానం)",
+    kanyadanam_names: "పెద్దబొమ్మ రాజేష్ & పెద్దబొమ్మ సునీత",
+    kanyadanam_relation: "(వధువు బాబాయి & పిన్ని)",
+    kanyadanam_desc: "కన్యాదాన మహోత్సవ కర్తలు",
+
+    // Parents
+    label_parents_section: "వధూవరుల తల్లిదండ్రులు",
     label_bride_parents: "వధువు తల్లిదండ్రులు:",
     bride_parents_names: "స్వర్గీయ అవధూత వినాయక్ రావు & శ్రీమతి అవధూత అనురాధ",
-    label_groom_parents: "వరుని తండ్రి:",
-    groom_parent_name: "శ్రీ పున్నా సత్యనారాయణ",
-    
+    bride_father_label: "తండ్రి:",
+    bride_father_name: "స్వర్గీయ అవధూత వినాయక్ రావు",
+    bride_mother_label: "తల్లి:",
+    bride_mother_name: "శ్రీమతి అవధూత అనురాధ",
+    label_groom_parents: "వరుని తల్లిదండ్రులు:",
+    groom_parent_name: "శ్రీ పున్నా సత్యనారాయణ & శ్రీమతి పున్నా వజ్రమ్మ",
+    groom_father_label: "తండ్రి:",
+    groom_father_name: "శ్రీ పున్నా సత్యనారాయణ",
+    groom_mother_label: "తల్లి:",
+    groom_mother_name: "శ్రీమతి పున్నా వజ్రమ్మ",
+
+    // With Best Wishes From
+    label_extended_family: "శుభాకాంక్షలతో...",
+
     // Engagement
     event_engagement_title: "నిశ్చితార్థ మహోత్సవం",
     event_engagement_tag: "నిశ్చితార్థం",
@@ -60,7 +82,7 @@ export const translations = {
 
     // Blessings & Footer
     blessing_quote: "\"మీ రాకయే మాకు ఆనందం, మీ ఆశీస్సులే వధూవరులకు శ్రీరామరక్ష\"",
-    blessing_note: "ఆహ్వాన పలకరింపులతో... పెద్దబొమ్మ సునీత & రాజేష్ మరియు సమస్త కుటుంబ సభ్యులు",
+    blessing_note: "ఆహ్వాన పలకరింపులతో... పెద్దబొమ్మ రాజేష్ & సునీత మరియు సమస్త కుటుంబ సభ్యులు",
     footer_slokam_title: "శుభమస్తు ✦ కల్యాణమస్తు",
     footer_message: "అవధూత మరియు పున్నా వంశీయుల వివాహ మహోత్సవానికి మీ పవిత్ర ఆశీస్సులు కోరుకుంటూ...",
     copyright: "© 2026 Chinnari Marriage • Kalyana Vaibhavam",
@@ -85,16 +107,38 @@ export const translations = {
     hero_muhurtham_date: "Sunday, 15 November 2026 • 9:58 AM",
     hero_muhurtham_lagna: "(Vrischika Lagna Pushkaramsha Sumuhurtham)",
     cta_view_details: "Muhurtham & Venue Details ↓",
-    label_primary_hosts: "Cordially Inviting (Family Hosts)",
-    host_names: "Peddabomma Sunitha & Peddabomma Rajesh",
-    host_pinni_label: "Pinni – Peddabomma Sunitha",
+
+    // Cordially Inviting (Family Hosts)
+    label_primary_hosts: "CORDIALLY INVITING (FAMILY HOSTS)",
+    host_names: "Peddabomma Rajesh & Peddabomma Sunitha",
     host_babai_label: "Babai – Peddabomma Rajesh",
-    host_relation: "(Bride's Pinni & Babai)",
+    host_pinni_label: "Pinni – Peddabomma Sunitha",
+    host_relation: "(Vadhuvu Babai & Pinni)",
     host_invitation_text: "We cordially invite your esteemed presence with family and friends to grace the auspicious occasion of our beloved children's wedding and bless the couple.",
+
+    // Kanyadanam
+    label_kanyadanam_by: "Kanyadanam by",
+    kanyadanam_names: "Peddabomma Rajesh & Peddabomma Sunitha",
+    kanyadanam_relation: "(Vadhuvu Babai & Pinni)",
+    kanyadanam_desc: "Performing the sacred Kanyadanam ceremony",
+
+    // Parents
+    label_parents_section: "Parents of Bride & Groom",
     label_bride_parents: "Bride's Parents:",
     bride_parents_names: "Late Avaduta Vinayak Rao & Smt. Avaduta Anuradha",
-    label_groom_parents: "Groom's Father:",
-    groom_parent_name: "Sri Punna Satyanarayana",
+    bride_father_label: "Father:",
+    bride_father_name: "Late Avaduta Vinayak Rao",
+    bride_mother_label: "Mother:",
+    bride_mother_name: "Smt. Avaduta Anuradha",
+    label_groom_parents: "Groom's Parents:",
+    groom_parent_name: "Punna Satyanarayana & Punna Vajramma",
+    groom_father_label: "Father:",
+    groom_father_name: "Punna Satyanarayana",
+    groom_mother_label: "Mother:",
+    groom_mother_name: "Punna Vajramma",
+
+    // With Best Wishes From
+    label_extended_family: "WITH BEST WISHES FROM",
 
     // Engagement
     event_engagement_title: "Engagement Ceremony",
@@ -134,7 +178,7 @@ export const translations = {
 
     // Blessings & Footer
     blessing_quote: "\"Your presence is our joy, your blessings the couple's eternal shield\"",
-    blessing_note: "With warm greetings from Peddabomma Sunitha & Rajesh and all family members",
+    blessing_note: "With warm greetings from Peddabomma Rajesh & Sunitha and all family members",
     footer_slokam_title: "Shubhamastu ✦ Kalyanamastu",
     footer_message: "Seeking your divine blessings and presence for the auspicious marriage of Avaduta and Punna families...",
     copyright: "© 2026 Chinnari Marriage • Kalyana Vaibhavam",

@@ -65,12 +65,12 @@ export const EngagementScene: React.FC<EngagementSceneProps> = ({ language }) =>
         {/* Chapter Header */}
         <div className="flex items-center justify-between border-b border-[#F0E2D0] pb-2.5 relative z-10">
           <div className="flex items-center space-x-2">
-            <span className="text-xl" role="img" aria-label="Rings">💍</span>
-            <span className="text-xs sm:text-sm uppercase tracking-widest text-[#855F1B] font-extrabold">
+            <span className="text-2xl" role="img" aria-label="Rings">💍</span>
+            <span className="text-[15px] sm:text-[16px] uppercase tracking-widest text-[#855F1B] font-black font-telugutitle">
               01 • {t.event_engagement_tag}
             </span>
           </div>
-          <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#F7EDD4] text-[#855F1B]">
+          <span className="text-[14px] sm:text-[15px] font-black px-3.5 py-1 rounded-full bg-[#F7EDD4] text-[#855F1B]">
             {t.event_engagement_tag}
           </span>
         </div>
@@ -85,12 +85,12 @@ export const EngagementScene: React.FC<EngagementSceneProps> = ({ language }) =>
 
           {/* Heading & Subtitle: Restrained fade-in as rings settle (1.8s - 2.3s) */}
           <div className={isVisible ? "animate-cinematic-heading" : "opacity-0"}>
-            <h2 className="text-xl sm:text-2xl font-black text-[#7B1E2B] font-telugutitle mt-3 leading-normal">
+            <h2 className="text-[24px] sm:text-[28px] font-black text-[#7B1E2B] font-telugutitle mt-3 leading-normal">
               {t.event_engagement_title}
             </h2>
 
-            <p className="text-xs sm:text-sm text-gray-700 font-semibold flex items-center justify-center gap-1.5 mt-1.5">
-              <Sparkles className="w-4 h-4 text-[#855F1B] shrink-0" aria-hidden="true" />
+            <p className="text-[16px] sm:text-[18px] text-gray-700 font-semibold flex items-center justify-center gap-1.5 mt-1.5">
+              <Sparkles className="w-5 h-5 text-[#855F1B] shrink-0" aria-hidden="true" />
               <span>
                 {language === 'te' 
                   ? 'శుభ ముహూర్త వేళ తాంబూలాలు & ఉంగరాలు మార్పిడి' 
@@ -104,31 +104,31 @@ export const EngagementScene: React.FC<EngagementSceneProps> = ({ language }) =>
         {/* Reveals gently at 2.0s-2.6s and holds completely stationary and crisp */}
         <div className={isVisible ? "animate-cinematic-details space-y-4 relative z-10" : "opacity-0 relative z-10"}>
           {/* Date & Time Box */}
-          <div className="rounded-xl bg-[#FFFDF8] border border-[#F0E2D0] p-3.5 space-y-3">
+          <div className="rounded-xl bg-[#FFFDF8] border border-[#F0E2D0] p-4 space-y-3">
             <div className="flex items-start space-x-3 text-gray-800">
-              <div className="w-8 h-8 rounded-full bg-[#FAF1E2] text-[#7B1E2B] flex items-center justify-center shrink-0 mt-0.5 border border-[#E8DCC8]">
-                <Clock className="w-4 h-4" aria-hidden="true" />
+              <div className="w-9 h-9 rounded-full bg-[#FAF1E2] text-[#7B1E2B] flex items-center justify-center shrink-0 mt-0.5 border border-[#E8DCC8]">
+                <Clock className="w-5 h-5" aria-hidden="true" />
               </div>
               <div>
-                <div className="font-black text-[#7B1E2B] text-base sm:text-lg font-telugutitle leading-snug">
+                <div className="font-black text-[#7B1E2B] text-[20px] sm:text-[24px] font-telugutitle leading-snug">
                   {t.engagement_date}
                 </div>
-                <div className="text-sm font-bold text-gray-800">
+                <div className="text-[17px] sm:text-[19px] font-extrabold text-gray-900 mt-0.5">
                   {t.engagement_time}
                 </div>
               </div>
             </div>
 
             {/* Venue: Peddabomma Home, Padmashali Township, Dammaiguda */}
-            <div className="flex items-start space-x-3 text-gray-800 pt-2.5 border-t border-[#F0E2D0]/80">
-              <div className="w-8 h-8 rounded-full bg-[#FAF1E2] text-[#7B1E2B] flex items-center justify-center shrink-0 mt-0.5 border border-[#E8DCC8]">
-                <MapPin className="w-4 h-4" aria-hidden="true" />
+            <div className="flex items-start space-x-3 text-gray-800 pt-3 border-t border-[#F0E2D0]/80">
+              <div className="w-9 h-9 rounded-full bg-[#FAF1E2] text-[#7B1E2B] flex items-center justify-center shrink-0 mt-0.5 border border-[#E8DCC8]">
+                <MapPin className="w-5 h-5" aria-hidden="true" />
               </div>
               <div>
-                <div className="font-black text-gray-950 text-base sm:text-lg font-telugutitle leading-snug">
+                <div className="font-black text-gray-950 text-[20px] sm:text-[24px] font-telugutitle leading-snug">
                   {t.engagement_venue_name}
                 </div>
-                <div className="text-xs sm:text-sm text-gray-800 leading-relaxed font-medium mt-0.5">
+                <div className="text-[16px] sm:text-[18px] text-gray-800 leading-relaxed font-medium mt-1">
                   {t.engagement_venue_address}
                 </div>
               </div>
@@ -141,16 +141,16 @@ export const EngagementScene: React.FC<EngagementSceneProps> = ({ language }) =>
               href={eventData.mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full min-h-[48px] py-3 px-4 rounded-xl maroon-gradient-bg text-white text-sm sm:text-base font-bold flex items-center justify-center space-x-2 shadow-sm hover:brightness-110 active:scale-[0.99] transition cursor-pointer"
+              className="w-full min-h-[50px] py-3.5 px-4 rounded-xl maroon-gradient-bg text-white text-[16px] sm:text-[17px] font-bold flex items-center justify-center space-x-2 shadow-sm hover:brightness-110 active:scale-[0.99] transition cursor-pointer"
             >
-              <Navigation className="w-4 h-4" aria-hidden="true" />
+              <Navigation className="w-5 h-5" aria-hidden="true" />
               <span>{t.btn_get_directions}</span>
             </a>
 
             <button
               type="button"
               onClick={handleDownloadCalendar}
-              className="w-full min-h-[48px] py-2.5 px-4 rounded-xl border-2 border-[#C6A15B] bg-[#FFFDF8] text-[#7B1E2B] text-sm sm:text-base font-extrabold flex items-center justify-center space-x-2 hover:bg-[#FAF1E2] active:scale-[0.99] transition cursor-pointer"
+              className="w-full min-h-[50px] py-3 px-4 rounded-xl border-2 border-[#C6A15B] bg-[#FFFDF8] text-[#7B1E2B] text-[16px] sm:text-[17px] font-extrabold flex items-center justify-center space-x-2 hover:bg-[#FAF1E2] active:scale-[0.99] transition cursor-pointer"
             >
               {downloaded ? (
                 <>
@@ -159,7 +159,7 @@ export const EngagementScene: React.FC<EngagementSceneProps> = ({ language }) =>
                 </>
               ) : (
                 <>
-                  <Calendar className="w-4 h-4 text-[#855F1B]" aria-hidden="true" />
+                  <Calendar className="w-5 h-5 text-[#855F1B]" aria-hidden="true" />
                   <span>{t.btn_add_calendar}</span>
                 </>
               )}

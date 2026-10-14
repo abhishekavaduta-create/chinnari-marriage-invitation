@@ -1,4 +1,4 @@
-import { WeddingEvent } from '../types/wedding';
+import { WeddingEvent, ExtendedFamilyMember } from '../types/wedding';
 
 export const DEITY_IMAGE_URL = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/assets/sri_lakshmi_narasimha_swamy.png`;
 
@@ -70,6 +70,51 @@ export const weddingEvents: WeddingEvent[] = [
       endIso: '2026-11-15T14:00:00+05:30',
       startUtc: '20261115T042800Z',
       endUtc: '20261115T083000Z'
+    }
+  }
+];
+
+export const extendedFamilyMembers: ExtendedFamilyMember[] = [
+  {
+    id: 'macha',
+    names: {
+      en: 'Macha Laxmi Narsimha & Macha Susheela',
+      te: 'మాచ లక్ష్మీ నరసింహ & మాచ సుశీల'
+    }
+  },
+  {
+    id: 'jindam',
+    names: {
+      en: 'Jindam RamaLingam & Jindam Vijaya',
+      te: 'జిందం రామలింగం & జిందం విజయ'
+    }
+  },
+  {
+    id: 'dontha',
+    names: {
+      en: 'Dontha Naesh & Dontha Vanitha',
+      te: 'దొంత నయేష్ & దొంత వనిత'
+    }
+  },
+  {
+    id: 'kalyana',
+    names: {
+      en: 'Kalyana Darshan & Kalyana Padmini',
+      te: 'కల్యాణ దర్శన్ & కల్యాణ పద్మిని'
+    }
+  },
+  {
+    id: 'mangalapalli',
+    names: {
+      en: 'Mangalapalli Chandra Mohan & Mangapalli Srikala',
+      te: 'మంగళపల్లి చంద్ర మోహన్ & మంగపల్లి శ్రీకళ'
+    }
+  },
+  {
+    id: 'boga',
+    names: {
+      en: 'Boga Vikram & Boga Chandrika',
+      te: 'బోగ విక్రమ్ & బోగ చంద్రిక'
     }
   }
 ];

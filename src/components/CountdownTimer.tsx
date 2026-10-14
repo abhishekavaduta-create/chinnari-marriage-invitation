@@ -49,40 +49,40 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ language }) => {
   };
 
   return (
-    <div className="rounded-xl bg-[#FAF3E8] p-3.5 border-2 border-[#C6A15B] text-center my-3.5 shadow-2xs">
-      <div className="text-sm sm:text-base font-extrabold text-[#7B1E2B] mb-2.5 font-telugutitle">
+    <div className="rounded-xl bg-[#FAF3E8] p-4 border-2 border-[#C6A15B] text-center my-3.5 shadow-2xs">
+      <div className="text-[17px] sm:text-[19px] font-black text-[#7B1E2B] mb-3 font-telugutitle">
         {t.label_countdown_title}
       </div>
       <div className="grid grid-cols-4 gap-2.5">
-        <div className="bg-white rounded-xl p-2.5 border border-[#E5C88A] shadow-xs">
-          <span className="block text-xl sm:text-2xl font-black text-[#7B1E2B] font-telugutitle tabular-nums leading-tight">
+        <div className="bg-white rounded-xl p-3 border border-[#E5C88A] shadow-xs">
+          <span className="block text-[26px] sm:text-[30px] font-black text-[#7B1E2B] font-telugutitle tabular-nums leading-tight">
             {timeLeft.days}
           </span>
-          <span className="text-xs text-gray-800 block font-bold mt-0.5">
+          <span className="text-[15px] text-gray-800 block font-bold mt-1">
             {t.timer_days}
           </span>
         </div>
-        <div className="bg-white rounded-xl p-2.5 border border-[#E5C88A] shadow-xs">
-          <span className="block text-xl sm:text-2xl font-black text-[#7B1E2B] font-telugutitle tabular-nums leading-tight">
+        <div className="bg-white rounded-xl p-3 border border-[#E5C88A] shadow-xs">
+          <span className="block text-[26px] sm:text-[30px] font-black text-[#7B1E2B] font-telugutitle tabular-nums leading-tight">
             {formatDigit(timeLeft.hours)}
           </span>
-          <span className="text-xs text-gray-800 block font-bold mt-0.5">
+          <span className="text-[15px] text-gray-800 block font-bold mt-1">
             {t.timer_hours}
           </span>
         </div>
-        <div className="bg-white rounded-xl p-2.5 border border-[#E5C88A] shadow-xs">
-          <span className="block text-xl sm:text-2xl font-black text-[#7B1E2B] font-telugutitle tabular-nums leading-tight">
+        <div className="bg-white rounded-xl p-3 border border-[#E5C88A] shadow-xs">
+          <span className="block text-[26px] sm:text-[30px] font-black text-[#7B1E2B] font-telugutitle tabular-nums leading-tight">
             {formatDigit(timeLeft.minutes)}
           </span>
-          <span className="text-xs text-gray-800 block font-bold mt-0.5">
+          <span className="text-[15px] text-gray-800 block font-bold mt-1">
             {t.timer_minutes}
           </span>
         </div>
-        <div className="bg-white rounded-xl p-2.5 border border-[#E5C88A] shadow-xs">
-          <span className="block text-xl sm:text-2xl font-black text-[#7B1E2B] font-telugutitle tabular-nums leading-tight">
+        <div className="bg-white rounded-xl p-3 border border-[#E5C88A] shadow-xs">
+          <span className="block text-[26px] sm:text-[30px] font-black text-[#7B1E2B] font-telugutitle tabular-nums leading-tight">
             {formatDigit(timeLeft.seconds)}
           </span>
-          <span className="text-xs text-gray-800 block font-bold mt-0.5">
+          <span className="text-[15px] text-gray-800 block font-bold mt-1">
             {t.timer_seconds}
           </span>
         </div>
