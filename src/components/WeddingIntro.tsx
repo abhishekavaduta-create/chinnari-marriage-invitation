@@ -100,7 +100,7 @@ export function WeddingIntro({ onComplete }: WeddingIntroProps) {
         </div>
 
         <motion.div
-          className="wedding-intro__ganesha"
+          className={`wedding-intro__ganesha ${stage === 3 ? 'wedding-intro__ganesha--raised' : ''}`}
           initial={false}
           animate={{
             opacity: stage >= 2 && stage <= 3 ? 1 : 0,
