@@ -22,7 +22,7 @@ const stages = [
   { stage: 3, duration: 2400 }, // invocation reveal and devotional pause
   { stage: 4, duration: 1500 }, // curtains close
   { stage: 5, duration: 2300 }, // curtains part
-  { stage: 6, duration: 2800 }, // title reveal and hold
+  { stage: 6, duration: 4100 }, // sequenced Namam, bilingual title, ornament and final hold
 ] as const;
 
 export function WeddingIntro({ onComplete }: WeddingIntroProps) {
@@ -161,16 +161,51 @@ export function WeddingIntro({ onComplete }: WeddingIntroProps) {
           transition={{ duration: 1.55, ease: [0.16, 1, 0.3, 1], delay: stage === 6 ? 0.4 : 0 }}
           aria-hidden={stage < 6 || stage >= 7}
         >
-          <div className="wedding-intro__namam" aria-hidden="true">
-            <span />
-            <b />
-            <span />
-          </div>
-          <p className="wedding-intro__auspicious" lang="te">శ్రీరస్తు • శుభమస్తు • అవిఘ్నమస్తు</p>
-          <h2>Avaduta's <span>Invitation</span></h2>
-          <p className="wedding-intro__title-te" lang="te">అవధూత వారి వివాహ ఆహ్వానం</p>
-          <div className="wedding-intro__title-divider"><span>❦</span><b>ॐ</b><span>❦</span></div>
-          <p className="wedding-intro__subtitle">A Sacred Celebration of Union</p>
+          <motion.div
+            className="wedding-intro__namam"
+            aria-hidden="true"
+            initial={false}
+            animate={{ opacity: stage === 6 ? 1 : 0, y: stage === 6 ? 0 : -14, scale: stage === 6 ? 1 : 0.72 }}
+            transition={{ duration: 1.05, ease: [0.16, 1, 0.3, 1], delay: stage === 6 ? 0.55 : 0 }}
+          >
+            <svg className="wedding-intro__namam-art" viewBox="0 0 72 92" role="img" aria-label="Traditional Vaishnava Thirunamam">
+              <path d="M12 10 H60 V43 C60 63 49 78 36 83 C23 78 12 63 12 43 Z" fill="#B58A36" />
+              <path d="M16 14 H56 V43 C56 59 47 72 36 77 C25 72 16 59 16 43 Z" fill="#FFFCF6" />
+              <path d="M32.5 15 H39.5 C38.3 31 38.4 47 36 66 C33.6 47 33.7 31 32.5 15 Z" fill="#8D1C2A" />
+              <circle cx="36" cy="82" r="2.1" fill="#C6A15B" />
+            </svg>
+          </motion.div>
+          <motion.p
+            className="wedding-intro__auspicious"
+            lang="te"
+            initial={false}
+            animate={{ opacity: stage === 6 ? 1 : 0, y: stage === 6 ? 0 : 10 }}
+            transition={{ duration: 0.85, ease: 'easeOut', delay: stage === 6 ? 0.95 : 0 }}
+          >శ్రీరస్తు • శుభమస్తు • అవిఘ్నమస్తు</motion.p>
+          <motion.h2
+            initial={false}
+            animate={{ opacity: stage === 6 ? 1 : 0, y: stage === 6 ? 0 : 14 }}
+            transition={{ duration: 1.05, ease: [0.16, 1, 0.3, 1], delay: stage === 6 ? 1.3 : 0 }}
+          >Avaduta's <span>Invitation</span></motion.h2>
+          <motion.p
+            className="wedding-intro__title-te"
+            lang="te"
+            initial={false}
+            animate={{ opacity: stage === 6 ? 1 : 0, y: stage === 6 ? 0 : 12 }}
+            transition={{ duration: 0.9, ease: 'easeOut', delay: stage === 6 ? 1.75 : 0 }}
+          >అవధూత వారి వివాహ ఆహ్వానం</motion.p>
+          <motion.div
+            className="wedding-intro__title-divider"
+            initial={false}
+            animate={{ opacity: stage === 6 ? 1 : 0, scaleX: stage === 6 ? 1 : 0.55 }}
+            transition={{ duration: 0.85, ease: 'easeOut', delay: stage === 6 ? 2.1 : 0 }}
+          ><span>❦</span><b>ॐ</b><span>❦</span></motion.div>
+          <motion.p
+            className="wedding-intro__subtitle"
+            initial={false}
+            animate={{ opacity: stage === 6 ? 1 : 0, y: stage === 6 ? 0 : 8 }}
+            transition={{ duration: 0.8, ease: 'easeOut', delay: stage === 6 ? 2.45 : 0 }}
+          >A Sacred Celebration of Union</motion.p>
         </motion.div>
 
         {stage >= 2 && stage < 7 && (
