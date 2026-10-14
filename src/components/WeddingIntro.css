@@ -31,7 +31,7 @@
   object-fit: cover;
   object-position: center;
   filter: saturate(.9) brightness(.78);
-  animation: wi-temple-arrive 1.4s ease-out both;
+  animation: wi-temple-arrive 2s ease-out both;
 }
 .wedding-intro__temple-fallback {
   z-index: -1;
@@ -58,7 +58,7 @@
   border-radius: 50%;
   background: radial-gradient(circle, rgba(255,211,123,.31), rgba(225,159,54,.1) 35%, transparent 70%);
   filter: blur(8px);
-  animation: wi-halo 4s ease-in-out infinite;
+  animation: wi-halo 5.8s ease-in-out infinite;
 }
 .wedding-intro__floor-ornament {
   position: absolute;
@@ -82,7 +82,7 @@
   background: var(--petal-color, #d88791);
   opacity: .72;
   transform: rotate(calc(var(--petal-index) * 37deg));
-  animation: wi-petal calc(5.5s + var(--petal-index) * .35s) linear infinite;
+  animation: wi-petal calc(7.2s + var(--petal-index) * .45s) linear infinite;
   animation-delay: calc(var(--petal-index) * -.65s);
 }
 .wedding-intro__petals i:nth-child(3n) { --petal-color: #e8b754; width: 8px; height: 12px; }
