@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import type { CSSProperties } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import './WeddingIntro.css';
 
@@ -94,7 +95,7 @@ export function WeddingIntro({ onComplete }: WeddingIntroProps) {
 
         <div className="wedding-intro__petals" aria-hidden="true">
           {Array.from({ length: 8 }, (_, index) => (
-            <i key={index} style={{ '--petal-index': index } as React.CSSProperties} />
+            <i key={index} style={{ '--petal-index': index } as CSSProperties} />
           ))}
         </div>
 
