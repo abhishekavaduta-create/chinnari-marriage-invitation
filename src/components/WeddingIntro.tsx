@@ -35,11 +35,7 @@ export function WeddingIntro({ onComplete }: WeddingIntroProps) {
   const finish = useCallback(() => {
     if (completedRef.current) return;
     completedRef.current = true;
-    try {
-      window.sessionStorage.setItem('chinnari-wedding-intro-seen', '1');
-    } catch {
-      // Storage can be unavailable in privacy modes; completion still works.
-    }
+    // Completion dismisses the intro only for this page load. A reload starts it again.
     onComplete();
   }, [onComplete]);
 
