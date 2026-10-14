@@ -724,3 +724,33 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* ================= INVITATION READABILITY ================= */
+/* Keep the established ivory background subtle; improve text contrast and minimum sizes instead. */
+main .text-xs {
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+main .text-sm {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+main .text-gray-600 {
+  color: #514141;
+}
+main .text-gray-700 {
+  color: #443536;
+}
+main .text-gray-800 {
+  color: #302527;
+}
+main .text-gray-900,
+main .text-gray-950 {
+  color: #241719;
+}
+main p,
+main li,
+main address {
+  text-wrap: pretty;
+}
