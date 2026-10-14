@@ -19,7 +19,7 @@ export const Header: React.FC<HeaderProps> = ({
   const t = translations[language];
 
   return (
-    <header className="sticky top-0 z-50 w-full max-w-md bg-[#FFF8EF]/95 backdrop-blur-md border-b border-[#E8DCC8] px-3.5 sm:px-4 py-2.5 flex items-center justify-between shadow-xs transition-colors">
+    <header className="sticky top-0 z-50 w-full max-w-md bg-[#FFF8EF] backdrop-blur-md border-x border-b border-[#C6A15B] px-3.5 sm:px-4 py-2.5 flex items-center justify-between shadow-xs transition-colors">
       {/* Title */}
       <div className="flex items-center space-x-1.5 min-w-0 pr-2">
         <span className="text-[16px] sm:text-[18px] font-extrabold tracking-normal leading-snug text-[#7B1E2B] font-telugutitle truncate">
