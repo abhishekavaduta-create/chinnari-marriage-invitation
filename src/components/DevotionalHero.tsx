@@ -40,7 +40,7 @@ export const DevotionalHero: React.FC<DevotionalHeroProps> = ({ language }) => {
     <section className="rounded-2xl overflow-hidden gold-border gold-glow bg-white p-3.5 sm:p-4 text-center transition-transform shadow-xs">
       {/* Devotional Focal Point: Sri Lakshmi Narasimha Swamy Wedding Invitation Artwork */}
       <div 
-        className={`relative w-full rounded-xl overflow-hidden border border-[#E8DCC8] shadow-inner mb-3 bg-[#FFFDF8] ${
+        className={`relative w-full aspect-[1.3/1] rounded-xl overflow-hidden border border-[#E8DCC8] shadow-inner mb-3 bg-[#FFFDF8] ${
           isOpeningAnimated ? 'animate-invitation-reveal' : ''
         }`}
       >
@@ -49,7 +49,7 @@ export const DevotionalHero: React.FC<DevotionalHeroProps> = ({ language }) => {
             <img
               src={DEITY_IMAGE_URL}
               alt="శ్రీ లక్ష్మీ నరసింహ స్వామి వారి దివ్య ఆశీస్సులు"
-              className="w-full h-auto block select-none rounded-xl"
+              className="absolute inset-0 w-full h-full object-cover object-top block select-none rounded-xl"
               loading="eager"
               referrerPolicy="no-referrer"
               onError={() => setImageError(true)}
@@ -78,7 +78,7 @@ export const DevotionalHero: React.FC<DevotionalHeroProps> = ({ language }) => {
             )}
           </>
         ) : (
-          <div className="py-8 px-4 flex flex-col items-center justify-center space-y-2 bg-[#FAF1E2] text-[#7B1E2B]">
+          <div className="absolute inset-0 py-8 px-4 flex flex-col items-center justify-center space-y-2 bg-[#FAF1E2] text-[#7B1E2B]">
             <NamamIcon className="w-48 h-16" />
             <span className="text-base font-bold font-telugutitle text-[#7B1E2B]">
               శ్రీ లక్ష్మీ నరసింహ స్వామి
