@@ -232,30 +232,27 @@
 }
 .wedding-intro__namam {
   position: relative;
-  height: 70px;
-  width: 60px;
-  margin-bottom: 22px;
+  height: 82px;
+  width: 64px;
+  flex: 0 0 auto;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  gap: 5px;
-  filter: drop-shadow(0 4px 8px rgba(120,72,12,.2));
+  align-items: center;
+  filter: drop-shadow(0 4px 8px rgba(120,72,12,.22));
 }
-.wedding-intro__namam span {
+.wedding-intro__namam-art {
   display: block;
-  width: 13px;
-  height: 54px;
-  border: 5px solid #b38a3c;
-  border-top: 0;
-  border-radius: 0 0 12px 12px;
-  background: rgba(255,255,255,.5);
+  width: 58px;
+  height: 76px;
+  overflow: visible;
 }
-.wedding-intro__namam b {
-  display: block;
-  width: 8px;
-  height: 62px;
-  border-radius: 8px;
-  background: #8d1c2a;
+.wedding-intro__namam--reveal {
+  animation: wi-namam-glow 2.8s ease-in-out .45s 1 both;
+}
+@keyframes wi-namam-glow {
+  0%, 100% { filter: drop-shadow(0 3px 7px rgba(120,72,12,.2)); }
+  45%, 70% { filter: drop-shadow(0 0 9px rgba(198,161,91,.6)) drop-shadow(0 4px 10px rgba(120,72,12,.3)); }
 }
 .wedding-intro__auspicious {
   font-family: 'Noto Serif Telugu', serif;
