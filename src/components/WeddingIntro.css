@@ -383,3 +383,23 @@
   }
   .wedding-intro__petals { display: none; }
 }
+
+
+.wedding-intro__title-te {
+  position: relative;
+  margin-top: 14px;
+  max-width: 100%;
+  color: #5e1119;
+  font-family: 'Noto Serif Telugu', 'Noto Sans Telugu', serif;
+  font-size: clamp(1.25rem, 4.4vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.75;
+  text-wrap: balance;
+}
+@media (max-width: 480px) {
+  .wedding-intro__title-te {
+    margin-top: 12px;
+    font-size: clamp(1.22rem, 4.8vw, 1.55rem);
+    line-height: 1.8;
+  }
+}

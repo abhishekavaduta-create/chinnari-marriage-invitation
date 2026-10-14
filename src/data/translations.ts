@@ -1,6 +1,6 @@
 export const translations = {
   te: {
-    nav_title: "ధనలక్ష్మి & శేఖర్ వివాహం",
+    nav_title: "అవధూత వారి వివాహ ఆహ్వానం",
     hero_invocation: "శ్రీ లక్ష్మీ నరసింహ స్వామి ఆశీస్సులతో",
     hero_slokam: "|| శ్రీరస్తు • శుభమస్తు • అవిఘ్నమస్తు ||",
     invitation_lead: "కల్యాణ వేడుకకు సకుటుంబ సపరివార సమేత ఆహ్వానం",
@@ -96,7 +96,7 @@ export const translations = {
     petals_toggle: "పూల వర్షం"
   },
   en: {
-    nav_title: "Dhanlaxmi & Shekar Wedding",
+    nav_title: "Avaduta's Invitation",
     hero_invocation: "With the Divine Blessings of Sri Lakshmi Narasimha Swamy",
     hero_slokam: "|| Sri Rastu • Shubhamastu • Avighnamastu ||",
     invitation_lead: "Cordially invite you and your family to celebrate the wedding ceremony of",

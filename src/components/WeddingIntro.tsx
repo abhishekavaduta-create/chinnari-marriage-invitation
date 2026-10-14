@@ -167,7 +167,8 @@ export function WeddingIntro({ onComplete }: WeddingIntroProps) {
             <span />
           </div>
           <p className="wedding-intro__auspicious" lang="te">శ్రీరస్తు • శుభమస్తు • అవిఘ్నమస్తు</p>
-          <h2>Avaduta's <span>Marriage Invitation</span></h2>
+          <h2>Avaduta's <span>Invitation</span></h2>
+          <p className="wedding-intro__title-te" lang="te">అవధూత వారి వివాహ ఆహ్వానం</p>
           <div className="wedding-intro__title-divider"><span>❦</span><b>ॐ</b><span>❦</span></div>
           <p className="wedding-intro__subtitle">A Sacred Celebration of Union</p>
         </motion.div>
