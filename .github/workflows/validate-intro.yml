@@ -11,6 +11,7 @@ on:
       - 'vite.config.ts'
       - 'tsconfig.json'
       - '.github/workflows/validate-intro.yml'
+      - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
 permissions:
