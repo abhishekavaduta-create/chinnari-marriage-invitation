@@ -137,7 +137,7 @@ export function WeddingIntro({ onComplete }: WeddingIntroProps) {
         <motion.div
           className="wedding-intro__curtain wedding-intro__curtain--left"
           initial={false}
-          animate={{ x: stage >= 5 ? '-101%' : '0%' }}
+          animate={{ x: stage >= 5 || stage < 4 ? '-101%' : '0%' }}
           transition={{ duration: stage === 5 ? 1.65 : 0.95, ease: [0.25, 1, 0.5, 1] }}
           aria-hidden="true"
         >
@@ -146,7 +146,7 @@ export function WeddingIntro({ onComplete }: WeddingIntroProps) {
         <motion.div
           className="wedding-intro__curtain wedding-intro__curtain--right"
           initial={false}
-          animate={{ x: stage >= 5 ? '101%' : '0%' }}
+          animate={{ x: stage >= 5 || stage < 4 ? '101%' : '0%' }}
           transition={{ duration: stage === 5 ? 1.65 : 0.95, ease: [0.25, 1, 0.5, 1] }}
           aria-hidden="true"
         >
