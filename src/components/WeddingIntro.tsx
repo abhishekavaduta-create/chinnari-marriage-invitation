@@ -105,7 +105,7 @@ export function WeddingIntro({ onComplete }: WeddingIntroProps) {
           animate={{
             opacity: stage >= 2 && stage <= 3 ? 1 : 0,
             scale: stage >= 2 && stage <= 3 ? 1 : 0.94,
-            y: stage >= 2 && stage <= 3 ? 0 : 10,
+            y: stage === 3 ? '-7vh' : stage === 2 ? 0 : 10,
           }}
           transition={{ duration: 1.25, ease: [0.16, 1, 0.3, 1] }}
           aria-hidden={stage < 2 || stage > 3}
