@@ -14,12 +14,9 @@ import { WeddingIntro } from './components/WeddingIntro';
 
 function shouldShowWeddingIntro(): boolean {
   if (typeof window === 'undefined') return false;
-  try {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return false;
-    return window.sessionStorage.getItem('chinnari-wedding-intro-seen') !== '1';
-  } catch {
-    return !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  }
+  // Replay on every fresh page load/reload. Skip Intro only dismisses this
+  // mounted intro; it does not suppress the next visit or browser refresh.
+  return !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
 export default function App() {
