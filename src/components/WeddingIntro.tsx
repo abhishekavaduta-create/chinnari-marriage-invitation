@@ -10,8 +10,7 @@ type WeddingIntroProps = {
 const TEMPLE_IMAGE =
   'https://lh3.googleusercontent.com/aida/AEtjO1UHHi5fJbmmovjR1i4bsR0wWsXi8Fn9x4jSl3yVLbNIVFgSB2pO68etdVNsj0ehxJ02d9UQxXcWKIViHpoBptB5T_38uBgqEavKoyYHf17914YMlfySG4T2EosOu2oJMmC4JRDe9P0CbQTxjM0B6RGaAs8AKac-3-WCnkyYY6zeVCBjsVOdxEqK_PsL-oFXCqJK1iXAC8a0Ni0kzqv8ce-kYMO06zOTyZqEspA2LFCb0DLmNISC18CWKWQP';
 
-const GANESHA_IMAGE =
-  'https://lh3.googleusercontent.com/aida/AEtjO1XRzh0WwVb5VNzHsslKxJQuoc4FFWhss_lOLlrfRSr_V4DuqxaCAz4Cw5lzDKUaGqq0379Bmd6vFFgb6rUxOCFVNReykwiUTk41RSSmU1h9H8aVn7FQWpLPiAtWbxI-e8bC3oSa4K2DUWkeU6zx9HIoHNB7XAfUDSwfyerU034OihYrvaVf77VrLifValiOqn2Xsof1eH_jF7MNtGP591MIeg0adjD0SNwbyrXJFn8hh9e9Vz62-Jhs1rYg';
+const GANESHA_IMAGE = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/assets/ganesha-idol-cutout.webp`;
 
 const CURTAIN_IMAGE =
   'https://lh3.googleusercontent.com/aida/AEtjO1XnaZC1VikLw6TAk_PCoY_z19FQFu81lTC93uldzeNHJKcbaVi_AkwUOM3HveyM2uSgVnnCNal7jSJidhf7nAn5tn4-NGzy0KJApi72So6MHrI2hfKnN1vv2u3F0ODflnxKttKPKRNIRqm33DwYPIxni82jd_dXHXgz6UQRsFlQ4KphP-DhCtw8O-yqT9eOj3UI3O0n5wdUyNjCQ4WLUycNOu9NWRhwkhOsvNVy75w_IsObfUWHPK-TTio';
