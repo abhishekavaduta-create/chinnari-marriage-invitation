@@ -151,7 +151,7 @@ export function WeddingIntro({ onComplete }: WeddingIntroProps) {
         </motion.div>
 
         <motion.div
-          className="wedding-intro__title"
+          className={`wedding-intro__title ${stage === 6 ? 'wedding-intro__title--active' : ''}`}
           initial={false}
           animate={{
             opacity: stage >= 6 && stage < 7 ? 1 : 0,
@@ -162,7 +162,7 @@ export function WeddingIntro({ onComplete }: WeddingIntroProps) {
           aria-hidden={stage < 6 || stage >= 7}
         >
           <motion.div
-            className="wedding-intro__namam"
+            className={`wedding-intro__namam ${stage === 6 ? 'wedding-intro__namam--reveal' : ''}`}
             aria-hidden="true"
             initial={false}
             animate={{ opacity: stage === 6 ? 1 : 0, y: stage === 6 ? 0 : -14, scale: stage === 6 ? 1 : 0.72 }}
