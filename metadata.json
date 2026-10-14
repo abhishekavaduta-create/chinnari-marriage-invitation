@@ -1,0 +1,6 @@
+{
+  "name": "Chinnari Marriage",
+  "description": "Mobile-first traditional Telugu wedding invitation for Avaduta Dhanlaxmi and Punna Shekar with devotional focal point, bilingual Telugu/English support, muhurtham countdown, and event directions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

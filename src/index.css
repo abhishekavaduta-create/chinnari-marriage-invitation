@@ -1,0 +1,726 @@
+@import "tailwindcss";
+
+@theme {
+  --color-maroon: #7B1E2B;
+  --color-maroon-dark: #58111D;
+  --color-maroon-light: #9E2A3A;
+  --color-maroon-900: #3D0A12;
+
+  --color-gold: #C6A15B;
+  --color-gold-light: #E5C88A;
+  --color-gold-dark: #9E7D3B;
+  --color-gold-sand: #F7EDD4;
+
+  --color-parchment: #FFF8EF;
+  --color-parchment-card: #FCF5E8;
+  --color-parchment-border: #E8DCC8;
+
+  --font-telugu: "Suranna", "Noto Sans Telugu", serif;
+  --font-telugutitle: "Ramabhadra", "Noto Sans Telugu", sans-serif;
+  --font-display: "Playfair Display", serif;
+  --font-cinzel: "Cinzel Decorative", serif;
+}
+
+@layer base {
+  body {
+    background-color: #FFF8EF;
+    color: #2D1518;
+    font-family: var(--font-telugu);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+}
+
+.gold-border {
+  border: 1.5px solid #C6A15B;
+}
+
+.gold-glow {
+  box-shadow: 0 4px 20px rgba(198, 161, 91, 0.22);
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #FFFDF8 0%, #FAF1E2 100%);
+}
+
+.maroon-gradient-bg {
+  background: linear-gradient(135deg, #7B1E2B 0%, #54101B 100%);
+}
+
+/* ================= CINEMATIC OPENING: SRI LAKSHMI NARASIMHA SWAMY ARTWORK ================= */
+/* Total duration: 3.5s
+   1. 0.0s - 1.0s (0% - 28%): Full image fades in smoothly from warm ivory background
+   2. 0.9s - 2.4s (25% - 68%): Soft antique-gold glow blooms briefly around the border
+   3. 0.0s - 3.2s (0% - 91%): Gentle scale transition from 1.02 to 1.00 without cropping
+   4. 0.5s - 3.5s: Subtle falling flower petals as a separate overlay
+   5. 3.2s+ (91% - 100%): Motion ceases completely; original image remains completely still and sharp
+*/
+@keyframes invitationArtworkReveal {
+  0% {
+    opacity: 0;
+    transform: scale(1.02);
+    box-shadow: 0 0 0 rgba(198, 161, 91, 0);
+    border-color: rgba(198, 161, 91, 0.2);
+  }
+  28% {
+    opacity: 1;
+  }
+  48% {
+    box-shadow: 0 0 24px 3px rgba(198, 161, 91, 0.6), 0 0 10px 1px rgba(229, 200, 138, 0.4);
+    border-color: #C6A15B;
+  }
+  70% {
+    box-shadow: 0 0 14px 1px rgba(198, 161, 91, 0.35);
+    border-color: rgba(198, 161, 91, 0.6);
+  }
+  91%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 4px 16px rgba(123, 30, 43, 0.08), 0 0 0 1px rgba(198, 161, 91, 0.2);
+    border-color: #E8DCC8;
+  }
+}
+
+.animate-invitation-reveal {
+  animation: invitationArtworkReveal 3.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: opacity, transform, box-shadow;
+}
+
+/* Subtle Falling Flower Petals Overlay during the 0.5s - 3.5s opening reveal */
+@keyframes openingPetalDrift1 {
+  0% {
+    opacity: 0;
+    transform: translate(25px, -20px) rotate(0deg) scale(0.75);
+  }
+  15% {
+    opacity: 0.85;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-15px, 220px) rotate(190deg) scale(0.95);
+  }
+}
+
+@keyframes openingPetalDrift2 {
+  0% {
+    opacity: 0;
+    transform: translate(120px, -25px) rotate(30deg) scale(0.85);
+  }
+  20% {
+    opacity: 0.9;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(70px, 260px) rotate(240deg) scale(1.05);
+  }
+}
+
+@keyframes openingPetalDrift3 {
+  0% {
+    opacity: 0;
+    transform: translate(240px, -15px) rotate(-20deg) scale(0.8);
+  }
+  20% {
+    opacity: 0.85;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(280px, 240px) rotate(210deg) scale(1);
+  }
+}
+
+@keyframes openingPetalDrift4 {
+  0% {
+    opacity: 0;
+    transform: translate(180px, -30px) rotate(50deg) scale(0.7);
+  }
+  25% {
+    opacity: 0.85;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(150px, 270px) rotate(290deg) scale(0.9);
+  }
+}
+
+.animate-opening-petal-1 {
+  animation: openingPetalDrift1 3.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+.animate-opening-petal-2 {
+  animation: openingPetalDrift2 3.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
+}
+.animate-opening-petal-3 {
+  animation: openingPetalDrift3 3.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s forwards;
+}
+.animate-opening-petal-4 {
+  animation: openingPetalDrift4 3.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s forwards;
+}
+
+/* ================= ENGAGEMENT CINEMATIC RING REVEAL ================= */
+/* Total duration: 2.6s
+   - Approach (0 - 1.0s / 0% - 38.5%): Rings held distinctly apart
+   - Union (1.0 - 1.8s / 38.5% - 69.2%): Smooth glide into interlocked geometry
+   - Golden Highlight (1.8 - 2.5s / 69.2% - 96.2%): Single controlled glint & band sweep
+   - Settle & Hold (2.5s+ / 96.2% - 100%): Motionless hold, details stationary
+*/
+
+@keyframes ringCinematicApproachLeft {
+  0% {
+    transform: translateX(-52px);
+    opacity: 0.9;
+  }
+  38.5% {
+    transform: translateX(-52px);
+    opacity: 1;
+  }
+  69.2% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes ringCinematicApproachRight {
+  0% {
+    transform: translateX(52px);
+    opacity: 0.9;
+  }
+  38.5% {
+    transform: translateX(52px);
+    opacity: 1;
+  }
+  69.2% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.animate-cinematic-ring-left {
+  animation: ringCinematicApproachLeft 2.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-cinematic-ring-right {
+  animation: ringCinematicApproachRight 2.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Phase 2: 3D Interlock weave fades in as rings cross (1.3s - 1.8s) and holds */
+@keyframes ringCinematicWeave {
+  0%, 48% {
+    opacity: 0;
+  }
+  69.2%, 100% {
+    opacity: 1;
+  }
+}
+
+.animate-cinematic-weave {
+  animation: ringCinematicWeave 2.6s ease-out forwards;
+}
+
+/* Phase 3: Single Focused Diamond Glint (1.8s - 2.5s) */
+@keyframes ringCinematicGlint {
+  0%, 69.2% {
+    opacity: 0;
+    transform: scale(0.25) rotate(0deg);
+  }
+  76% {
+    opacity: 1;
+    transform: scale(1.15) rotate(25deg);
+  }
+  86% {
+    opacity: 0.85;
+    transform: scale(0.95) rotate(55deg);
+  }
+  95%, 100% {
+    opacity: 0;
+    transform: scale(0.2) rotate(80deg);
+  }
+}
+
+.animate-cinematic-glint {
+  animation: ringCinematicGlint 2.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Phase 3: Single Controlled Band Highlight Sweep (1.8s - 2.45s) */
+@keyframes ringCinematicSweep {
+  0%, 69.2% {
+    opacity: 0;
+    stroke-dashoffset: 260;
+  }
+  74% {
+    opacity: 0.9;
+  }
+  88% {
+    opacity: 0.85;
+    stroke-dashoffset: 70;
+  }
+  95%, 100% {
+    opacity: 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-cinematic-sweep {
+  animation: ringCinematicSweep 2.6s ease-out forwards;
+}
+
+/* Phase 4: Restrained Heading Fade-In (1.8s - 2.3s) */
+@keyframes headingCinematicReveal {
+  0%, 68% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  88% {
+    opacity: 0.9;
+    transform: translateY(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.animate-cinematic-heading {
+  animation: headingCinematicReveal 2.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Phase 4: Settle & Hold Event Details Fade-In (2.0s - 2.6s+) */
+@keyframes detailsCinematicReveal {
+  0%, 78% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  94% {
+    opacity: 0.85;
+    transform: translateY(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.animate-cinematic-details {
+  animation: detailsCinematicReveal 2.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ================= HALDI / PASUPU CINEMATIC REVEAL ================= */
+/* Total duration: 2.5s
+   - 0.0 - 0.7s (0% - 28%): Stage and bowl emerge softly from warm golden glow
+   - 0.7 - 1.5s (28% - 60%): Bowl settles, floral accents reveal subtly
+   - 1.5 - 2.0s (60% - 80%): Single restrained golden illumination sweep
+   - 1.8 - 2.5s (72% - 100%): Heading, text, and details fade in
+   - 2.5s+ (100%): All elements hold completely stationary and readable
+*/
+
+/* 1. Stage Glow Emerge & Settle */
+@keyframes haldiCinematicStage {
+  0% {
+    opacity: 0.15;
+    transform: scale(0.9);
+  }
+  28% {
+    opacity: 0.85;
+    transform: scale(1.04);
+  }
+  60% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+}
+
+.animate-haldi-stage {
+  animation: haldiCinematicStage 2.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* 2. Turmeric Bowl Emerge & Settle */
+@keyframes haldiCinematicBowl {
+  0% {
+    opacity: 0.2;
+    transform: translateY(10px) scale(0.95);
+  }
+  28% {
+    opacity: 0.9;
+    transform: translateY(2px) scale(0.99);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.animate-haldi-bowl {
+  animation: haldiCinematicBowl 2.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* 3. Surrounding Floral Accents Subtle Reveal (0.7s - 1.5s) */
+@keyframes haldiCinematicFloral {
+  0%, 28% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  56% {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+  68%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-haldi-floral {
+  animation: haldiCinematicFloral 2.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* 4. Single Restrained Golden Illumination Sweep (1.5s - 2.0s) */
+@keyframes haldiCinematicSheen {
+  0%, 58% {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+  68% {
+    opacity: 0.85;
+    transform: translateX(0px);
+  }
+  78% {
+    opacity: 0.7;
+    transform: translateX(45px);
+  }
+  86%, 100% {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+}
+
+.animate-haldi-sheen {
+  animation: haldiCinematicSheen 2.5s ease-out forwards;
+}
+
+/* 5. Heading & Subtext Fade-In (1.8s - 2.3s) */
+@keyframes haldiCinematicHeading {
+  0%, 70% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  90% {
+    opacity: 0.9;
+    transform: translateY(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.animate-haldi-heading {
+  animation: haldiCinematicHeading 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 6. Event Details & Actions Fade-In (2.0s - 2.5s) */
+@keyframes haldiCinematicDetails {
+  0%, 78% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  94% {
+    opacity: 0.85;
+    transform: translateY(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.animate-haldi-details {
+  animation: haldiCinematicDetails 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ================= MARRIAGE MANDAPAM CINEMATIC REVEAL ================= */
+/* Total duration: 3.0s
+   - 0.0 - 0.8s (0% - 27%): Mandapam emerges gradually from soft ivory-gold glow
+   - 0.8 - 1.6s (27% - 53%): Floral pillars and decorative details reveal subtly
+   - 1.3 - 2.0s (43% - 67%): Lamps illuminate sequentially with subtle opacity/glow transitions
+   - 1.8 - 2.5s (60% - 83%): Marriage heading and subtitle reveal
+   - 2.2 - 3.0s (73% - 100%): Emphasize muhurtham time (9:58 AM), venue, and action buttons
+   - 3.0s+ (100%): Motion ceases completely; all elements hold stationary
+*/
+
+/* 1. Mandapam Soft Ivory-Gold Glow Stage Emerge */
+@keyframes mandapamCinematicStage {
+  0% {
+    opacity: 0.1;
+    transform: scale(0.92);
+  }
+  27% {
+    opacity: 0.85;
+    transform: scale(1.03);
+  }
+  53% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+}
+
+.animate-mandapam-stage {
+  animation: mandapamCinematicStage 3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* 2. Primary Mandapam Canopy & Base Emerge */
+@keyframes mandapamCinematicEmerge {
+  0% {
+    opacity: 0.2;
+    transform: translateY(12px) scale(0.96);
+  }
+  27% {
+    opacity: 0.9;
+    transform: translateY(2px) scale(0.99);
+  }
+  53% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.animate-mandapam-emerge {
+  animation: mandapamCinematicEmerge 3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* 3. Floral Pillars & Garlands Subtle Reveal (0.8s - 1.6s) */
+@keyframes mandapamCinematicPillars {
+  0%, 27% {
+    opacity: 0;
+    transform: scale(0.93);
+  }
+  48% {
+    opacity: 0.85;
+    transform: scale(1.01);
+  }
+  55%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-mandapam-pillars {
+  animation: mandapamCinematicPillars 3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* 4. Sequential Lamp Illumination (1.3s - 2.0s) */
+/* Lamp 1: Left Hanging Brass Lamp (1.3s - 1.7s) */
+@keyframes lampSeq1 {
+  0%, 43% {
+    opacity: 0.15;
+    transform: scale(0.85);
+  }
+  52% {
+    opacity: 0.95;
+    transform: scale(1.1);
+  }
+  57%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-lamp-seq-1 {
+  animation: lampSeq1 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Lamp 2: Center Sacred Altar Deepam Flame (1.5s - 1.9s) */
+@keyframes lampSeq2 {
+  0%, 50% {
+    opacity: 0.15;
+    transform: scale(0.85);
+  }
+  59% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  64%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-lamp-seq-2 {
+  animation: lampSeq2 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Lamp 3: Right Hanging Brass Lamp (1.7s - 2.0s) */
+@keyframes lampSeq3 {
+  0%, 56% {
+    opacity: 0.15;
+    transform: scale(0.85);
+  }
+  64% {
+    opacity: 0.95;
+    transform: scale(1.1);
+  }
+  68%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-lamp-seq-3 {
+  animation: lampSeq3 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 5. Marriage Heading & Subtitle Reveal (1.8s - 2.5s) */
+@keyframes marriageCinematicHeading {
+  0%, 60% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  78% {
+    opacity: 0.9;
+    transform: translateY(2px);
+  }
+  85%, 100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.animate-marriage-heading {
+  animation: marriageCinematicHeading 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 6. Auspicious Muhurtham Emphasis (2.2s - 3.0s) */
+@keyframes marriageCinematicMuhurtham {
+  0%, 73% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+  86% {
+    opacity: 0.95;
+    transform: translateY(1px) scale(1.02);
+  }
+  94%, 100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.animate-marriage-muhurtham {
+  animation: marriageCinematicMuhurtham 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 7. Venue, Countdown & Actions Fade-In (2.4s - 3.0s) */
+@keyframes marriageCinematicActions {
+  0%, 80% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  95% {
+    opacity: 0.9;
+    transform: translateY(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.animate-marriage-actions {
+  animation: marriageCinematicActions 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Golden Glint & Shimmer Sweep */
+@keyframes glintSweep {
+  0%, 10%, 100% {
+    opacity: 0.3;
+    transform: scale(0.85);
+  }
+  30%, 40% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+}
+
+.animate-glint {
+  animation: glintSweep 3.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-invitation-reveal,
+  .animate-opening-petal-1,
+  .animate-opening-petal-2,
+  .animate-opening-petal-3,
+  .animate-opening-petal-4,
+  .animate-float,
+  .animate-cinematic-ring-left,
+  .animate-cinematic-ring-right,
+  .animate-cinematic-weave,
+  .animate-cinematic-glint,
+  .animate-cinematic-sweep,
+  .animate-cinematic-heading,
+  .animate-cinematic-details,
+  .animate-haldi-stage,
+  .animate-haldi-bowl,
+  .animate-haldi-floral,
+  .animate-haldi-sheen,
+  .animate-haldi-heading,
+  .animate-haldi-details,
+  .animate-mandapam-stage,
+  .animate-mandapam-emerge,
+  .animate-mandapam-pillars,
+  .animate-lamp-seq-1,
+  .animate-lamp-seq-2,
+  .animate-lamp-seq-3,
+  .animate-marriage-heading,
+  .animate-marriage-muhurtham,
+  .animate-marriage-actions,
+  .animate-glint {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    box-shadow: none !important;
+  }
+  .animate-opening-petal-1,
+  .animate-opening-petal-2,
+  .animate-opening-petal-3,
+  .animate-opening-petal-4 {
+    display: none !important;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}
