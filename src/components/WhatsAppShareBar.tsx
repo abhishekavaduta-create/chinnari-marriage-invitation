@@ -37,7 +37,7 @@ export const WhatsAppShareBar: React.FC<WhatsAppShareBarProps> = ({ language }) 
       className="fixed bottom-0 left-0 right-0 z-50 flex justify-center pointer-events-none px-3 pb-3"
       aria-label="Invitation sharing"
     >
-      <div className="w-full max-w-md bg-white/95 backdrop-blur-md border border-[#C6A15B] rounded-2xl p-2.5 flex items-center gap-2 shadow-xl pointer-events-auto">
+      <div className="w-full max-w-lg bg-white/95 backdrop-blur-md border border-[#C6A15B] rounded-2xl p-2.5 flex items-center gap-2 shadow-xl pointer-events-auto">
         <button
           type="button"
           onClick={handleShare}
