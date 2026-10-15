@@ -22,7 +22,7 @@ export const Header: React.FC<HeaderProps> = ({
     <header className="sticky top-0 z-50 w-[calc(100%-24px)] max-w-md bg-[#FFF8EF] backdrop-blur-md border-x border-b border-[#C6A15B] px-3.5 sm:px-4 py-2.5 flex items-center justify-between shadow-xs transition-colors">
       {/* Title */}
       <div className="flex items-center space-x-1.5 min-w-0 pr-2">
-        <span className="text-[16px] sm:text-[18px] font-extrabold tracking-normal leading-snug text-[#7B1E2B] font-telugutitle truncate">
+        <span className="text-[17px] sm:text-[18px] font-extrabold tracking-normal leading-snug text-[#7B1E2B] font-telugutitle truncate">
           {t.nav_title}
         </span>
       </div>
@@ -54,7 +54,7 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             type="button"
             onClick={() => onLanguageChange('te')}
-            className={`min-h-[38px] px-3.5 py-1 text-[16px] font-black rounded-full transition-all duration-200 cursor-pointer ${
+            className={`min-h-[38px] px-3.5 py-1 text-[17px] font-black rounded-full transition-all duration-200 cursor-pointer ${
               language === 'te'
                 ? 'bg-[#7B1E2B] text-white shadow-xs'
                 : 'text-[#7B1E2B] hover:text-[#58111D]'
@@ -66,7 +66,7 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             type="button"
             onClick={() => onLanguageChange('en')}
-            className={`min-h-[38px] px-3.5 py-1 text-[16px] font-black rounded-full transition-all duration-200 cursor-pointer ${
+            className={`min-h-[38px] px-3.5 py-1 text-[17px] font-black rounded-full transition-all duration-200 cursor-pointer ${
               language === 'en'
                 ? 'bg-[#7B1E2B] text-white shadow-xs'
                 : 'text-[#7B1E2B] hover:text-[#58111D]'
