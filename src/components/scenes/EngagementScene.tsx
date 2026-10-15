@@ -66,11 +66,11 @@ export const EngagementScene: React.FC<EngagementSceneProps> = ({ language }) =>
         <div className="flex items-center justify-between border-b border-[#F0E2D0] pb-2.5 relative z-10">
           <div className="flex items-center space-x-2">
             <span className="text-2xl" role="img" aria-label="Rings">💍</span>
-            <span className="text-[15px] sm:text-[16px] uppercase tracking-widest text-[#855F1B] font-black font-telugutitle">
+            <span className="text-[17px] sm:text-[18px] uppercase tracking-wide text-[#855F1B] font-black font-telugutitle">
               01 • {t.event_engagement_tag}
             </span>
           </div>
-          <span className="text-[14px] sm:text-[15px] font-black px-3.5 py-1 rounded-full bg-[#F7EDD4] text-[#855F1B]">
+          <span className="text-[16px] sm:text-[17px] font-black px-3.5 py-1 rounded-full bg-[#F7EDD4] text-[#855F1B]">
             {t.event_engagement_tag}
           </span>
         </div>
@@ -89,7 +89,7 @@ export const EngagementScene: React.FC<EngagementSceneProps> = ({ language }) =>
               {t.event_engagement_title}
             </h2>
 
-            <p className="text-[16px] sm:text-[18px] text-gray-700 font-semibold flex items-center justify-center gap-1.5 mt-1.5">
+            <p className="text-[17px] sm:text-[18px] text-gray-700 font-semibold flex items-center justify-center gap-1.5 mt-1.5">
               <Sparkles className="w-5 h-5 text-[#855F1B] shrink-0" aria-hidden="true" />
               <span>
                 {language === 'te' 
@@ -113,7 +113,7 @@ export const EngagementScene: React.FC<EngagementSceneProps> = ({ language }) =>
                 <div className="font-black text-[#7B1E2B] text-[20px] sm:text-[24px] font-telugutitle leading-snug">
                   {t.engagement_date}
                 </div>
-                <div className="text-[17px] sm:text-[19px] font-extrabold text-gray-900 mt-0.5">
+                <div className="text-[18px] sm:text-[19px] font-extrabold text-gray-900 mt-0.5">
                   {t.engagement_time}
                 </div>
               </div>
@@ -128,7 +128,7 @@ export const EngagementScene: React.FC<EngagementSceneProps> = ({ language }) =>
                 <div className="font-black text-gray-950 text-[20px] sm:text-[24px] font-telugutitle leading-snug">
                   {t.engagement_venue_name}
                 </div>
-                <div className="text-[16px] sm:text-[18px] text-gray-800 leading-relaxed font-medium mt-1">
+                <div className="text-[17px] sm:text-[18px] text-gray-800 leading-relaxed font-medium mt-1">
                   {t.engagement_venue_address}
                 </div>
               </div>
@@ -141,7 +141,7 @@ export const EngagementScene: React.FC<EngagementSceneProps> = ({ language }) =>
               href={eventData.mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full min-h-[50px] py-3.5 px-4 rounded-xl maroon-gradient-bg text-white text-[16px] sm:text-[17px] font-bold flex items-center justify-center space-x-2 shadow-sm hover:brightness-110 active:scale-[0.99] transition cursor-pointer"
+              className="w-full min-h-[50px] py-3.5 px-4 rounded-xl maroon-gradient-bg text-white text-[17px] sm:text-[18px] font-bold flex items-center justify-center space-x-2 shadow-sm hover:brightness-110 active:scale-[0.99] transition cursor-pointer"
             >
               <Navigation className="w-5 h-5" aria-hidden="true" />
               <span>{t.btn_get_directions}</span>
@@ -150,7 +150,7 @@ export const EngagementScene: React.FC<EngagementSceneProps> = ({ language }) =>
             <button
               type="button"
               onClick={handleDownloadCalendar}
-              className="w-full min-h-[50px] py-3 px-4 rounded-xl border-2 border-[#C6A15B] bg-[#FFFDF8] text-[#7B1E2B] text-[16px] sm:text-[17px] font-extrabold flex items-center justify-center space-x-2 hover:bg-[#FAF1E2] active:scale-[0.99] transition cursor-pointer"
+              className="w-full min-h-[50px] py-3 px-4 rounded-xl border-2 border-[#C6A15B] bg-[#FFFDF8] text-[#7B1E2B] text-[17px] sm:text-[18px] font-extrabold flex items-center justify-center space-x-2 hover:bg-[#FAF1E2] active:scale-[0.99] transition cursor-pointer"
             >
               {downloaded ? (
                 <>
