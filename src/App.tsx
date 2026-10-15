@@ -44,7 +44,7 @@ export default function App() {
         />
 
         {/* Main Single-Column Mobile-First Container (360px - 430px ideal target) */}
-        <main className="w-[calc(100%-24px)] max-w-md flex-1 px-3 sm:px-4 py-4 sm:py-5 space-y-4 bg-[#FFFCF6] border-x border-[#C6A15B] shadow-[0_0_36px_rgba(0,0,0,0.18)]">
+        <main className="w-[calc(100%-24px)] max-w-lg flex-1 px-3 sm:px-4 py-4 sm:py-5 space-y-4 bg-[#FFFCF6] border-x border-[#C6A15B] shadow-[0_0_36px_rgba(0,0,0,0.18)]">
           {/* Devotional Hero Section with Sri Lakshmi Narasimha Swamy */}
           <DevotionalHero 
             language={language} 

@@ -22,7 +22,7 @@ export const BlessingFooter: React.FC<BlessingFooterProps> = ({ language }) => {
         <h3 className="text-[22px] sm:text-[26px] font-black text-[#7B1E2B] font-telugutitle leading-normal">
           {t.blessing_quote}
         </h3>
-        <p className="text-[17px] sm:text-[19px] text-gray-800 italic font-semibold">
+        <p className="text-[18px] sm:text-[19px] text-gray-800 italic font-semibold">
           {t.blessing_note}
         </p>
       </section>
@@ -33,17 +33,17 @@ export const BlessingFooter: React.FC<BlessingFooterProps> = ({ language }) => {
           <KalashamIcon className="w-14 h-14" />
         </div>
 
-        <div className="text-[18px] sm:text-[20px] font-black text-[#855F1B] tracking-widest uppercase font-telugutitle">
+        <div className="text-[18px] sm:text-[20px] font-black text-[#855F1B] tracking-wide uppercase font-telugutitle">
           {t.footer_slokam_title}
         </div>
 
         <TraditionalDivider className="w-44 h-5 mx-auto opacity-80" />
 
-        <p className="text-[16px] sm:text-[18px] text-gray-800 leading-relaxed font-medium max-w-sm mx-auto">
+        <p className="text-[17px] sm:text-[18px] text-gray-800 leading-relaxed font-medium max-w-sm mx-auto">
           {t.footer_message}
         </p>
 
-        <div className="text-[15px] text-gray-600 pt-2 font-medium">
+        <div className="text-[17px] text-gray-600 pt-2 font-medium">
           {t.copyright}
         </div>
       </footer>

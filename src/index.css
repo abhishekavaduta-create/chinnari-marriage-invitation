@@ -15,9 +15,9 @@
   --color-parchment-card: #FCF5E8;
   --color-parchment-border: #E8DCC8;
 
-  --font-telugu: "Suranna", "Noto Sans Telugu", serif;
-  --font-telugutitle: "Ramabhadra", "Noto Sans Telugu", sans-serif;
-  --font-display: "Playfair Display", serif;
+  --font-telugu: "Noto Sans Telugu", "Noto Sans", sans-serif;
+  --font-telugutitle: "Noto Sans Telugu", "Noto Sans", "Ramabhadra", sans-serif;
+  --font-display: "Playfair Display", "Noto Sans", serif;
   --font-cinzel: "Cinzel Decorative", serif;
 }
 
@@ -25,7 +25,11 @@
   body {
     background-color: #5E1119;
     color: #2D1518;
-    font-family: var(--font-telugu);
+    font-family: "Noto Sans Telugu", "Noto Sans", system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
@@ -754,3 +758,26 @@ main li,
 main address {
   text-wrap: pretty;
 }
+
+
+/* ================= READABILITY & ACCESSIBILITY BASELINE ================= */
+/* Use a clear sans-serif family for both Telugu and Latin text. Avoid ornamental
+   glyph shapes for long passages, dates, addresses and action labels. */
+@layer base {
+  h1, h2, h3, h4 {
+    text-wrap: balance;
+  }
+
+  p, li, address {
+    line-height: 1.7;
+  }
+
+  button, a {
+    text-underline-offset: 0.18em;
+  }
+
+  :where(main, header, footer) {
+    font-kerning: normal;
+  }
+}
+

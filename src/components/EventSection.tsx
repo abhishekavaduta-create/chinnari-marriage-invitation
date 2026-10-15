@@ -54,7 +54,7 @@ export const EventSection: React.FC<EventSectionProps> = ({ event, language }) =
             {title}
           </h2>
         </div>
-        <span className={`text-[14px] sm:text-[15px] font-black px-3.5 py-1 rounded-full ${getTagColorClass()}`}>
+        <span className={`text-[17px] sm:text-[18px] font-black px-3.5 py-1 rounded-full ${getTagColorClass()}`}>
           {tag}
         </span>
       </div>
@@ -81,7 +81,7 @@ export const EventSection: React.FC<EventSectionProps> = ({ event, language }) =
       {/* Auspicious Muhurtham Spotlight for Marriage */}
       {event.id === 'marriage' && (
         <div className="rounded-xl gold-gradient-bg border-2 border-[#C6A15B] p-4 text-center shadow-2xs">
-          <div className="text-[15px] font-extrabold text-[#9E7D3B] uppercase tracking-wider mb-1">
+          <div className="text-[18px] font-extrabold text-[#9E7D3B] uppercase tracking-wider mb-1">
             {t.label_auspicious_time}
           </div>
           <div className="text-[20px] sm:text-[24px] font-black text-[#7B1E2B] font-telugutitle">
@@ -91,7 +91,7 @@ export const EventSection: React.FC<EventSectionProps> = ({ event, language }) =
             {time}
           </div>
           {lagna && (
-            <div className="text-[16px] sm:text-[18px] text-gray-800 mt-1 font-bold">
+            <div className="text-[18px] sm:text-[18px] text-gray-800 mt-1 font-bold">
               {lagna}
             </div>
           )}
@@ -108,7 +108,7 @@ export const EventSection: React.FC<EventSectionProps> = ({ event, language }) =
             <div className="font-black text-[#7B1E2B] text-[20px] sm:text-[24px] font-telugutitle">
               {date}
             </div>
-            <div className="text-[17px] sm:text-[19px] font-bold text-gray-800">
+            <div className="text-[18px] sm:text-[19px] font-bold text-gray-800">
               {time}
             </div>
           </div>
@@ -124,7 +124,7 @@ export const EventSection: React.FC<EventSectionProps> = ({ event, language }) =
           <div className="font-black text-gray-950 text-[20px] sm:text-[24px] font-telugutitle">
             {venueName}
           </div>
-          <div className="text-[16px] sm:text-[18px] text-gray-800 leading-relaxed font-medium mt-0.5">
+          <div className="text-[18px] sm:text-[18px] text-gray-800 leading-relaxed font-medium mt-0.5">
             {venueAddress}
           </div>
         </div>
@@ -142,7 +142,7 @@ export const EventSection: React.FC<EventSectionProps> = ({ event, language }) =
           href={event.mapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full min-h-[50px] py-3 px-4 rounded-xl maroon-gradient-bg text-white text-[16px] sm:text-[17px] font-bold flex items-center justify-center space-x-2 shadow-xs hover:brightness-110 active:scale-[0.99] transition cursor-pointer"
+          className="w-full min-h-[50px] py-3 px-4 rounded-xl maroon-gradient-bg text-white text-[18px] sm:text-[18px] font-bold flex items-center justify-center space-x-2 shadow-xs hover:brightness-110 active:scale-[0.99] transition cursor-pointer"
         >
           <Navigation className="w-5 h-5" aria-hidden="true" />
           <span>
@@ -154,7 +154,7 @@ export const EventSection: React.FC<EventSectionProps> = ({ event, language }) =
         <button
           type="button"
           onClick={handleDownloadCalendar}
-          className="w-full min-h-[50px] py-3 px-4 rounded-xl border-2 border-[#C6A15B] bg-[#FFFDF8] text-[#7B1E2B] text-[16px] sm:text-[17px] font-extrabold flex items-center justify-center space-x-2 hover:bg-[#FAF1E2] active:scale-[0.99] transition cursor-pointer"
+          className="w-full min-h-[50px] py-3 px-4 rounded-xl border-2 border-[#C6A15B] bg-[#FFFDF8] text-[#7B1E2B] text-[18px] sm:text-[18px] font-extrabold flex items-center justify-center space-x-2 hover:bg-[#FAF1E2] active:scale-[0.99] transition cursor-pointer"
         >
           {downloaded ? (
             <>

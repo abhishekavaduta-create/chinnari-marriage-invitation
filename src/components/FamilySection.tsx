@@ -28,7 +28,7 @@ export const FamilySection: React.FC<FamilySectionProps> = ({ language }) => {
           <h3 className="text-[24px] sm:text-[28px] font-black text-[#7B1E2B] font-telugutitle leading-normal">
             {t.host_names}
           </h3>
-          <p className="text-[16px] sm:text-[18px] text-gray-700 italic font-semibold mt-0.5">
+          <p className="text-[17px] sm:text-[18px] text-gray-700 italic font-semibold mt-0.5">
             {t.host_relation}
           </p>
         </div>
@@ -37,14 +37,14 @@ export const FamilySection: React.FC<FamilySectionProps> = ({ language }) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
           <div className="px-4 py-3 rounded-xl bg-white/95 border border-[#E8DCC8] shadow-2xs flex items-center space-x-2.5">
             <Heart className="w-5 h-5 text-[#7B1E2B] shrink-0 fill-current opacity-90" aria-hidden="true" />
-            <span className="text-[17px] sm:text-[19px] font-bold text-[#7B1E2B] font-telugutitle leading-normal">
+            <span className="text-[18px] sm:text-[19px] font-bold text-[#7B1E2B] font-telugutitle leading-normal">
               {t.host_babai_label}
             </span>
           </div>
 
           <div className="px-4 py-3 rounded-xl bg-white/95 border border-[#E8DCC8] shadow-2xs flex items-center space-x-2.5">
             <Heart className="w-5 h-5 text-[#7B1E2B] shrink-0 fill-current opacity-90" aria-hidden="true" />
-            <span className="text-[17px] sm:text-[19px] font-bold text-[#7B1E2B] font-telugutitle leading-normal">
+            <span className="text-[18px] sm:text-[19px] font-bold text-[#7B1E2B] font-telugutitle leading-normal">
               {t.host_pinni_label}
             </span>
           </div>
@@ -69,12 +69,12 @@ export const FamilySection: React.FC<FamilySectionProps> = ({ language }) => {
           <h3 className="text-[24px] sm:text-[28px] font-black text-[#7B1E2B] font-telugutitle leading-snug">
             {t.kanyadanam_names}
           </h3>
-          <p className="text-[16px] sm:text-[18px] text-gray-700 italic font-semibold mt-0.5">
+          <p className="text-[17px] sm:text-[18px] text-gray-700 italic font-semibold mt-0.5">
             {t.kanyadanam_relation}
           </p>
         </div>
 
-        <p className="text-[16px] sm:text-[18px] text-gray-700 italic font-medium max-w-sm mx-auto pt-0.5">
+        <p className="text-[17px] sm:text-[18px] text-gray-700 italic font-medium max-w-sm mx-auto pt-0.5">
           {t.kanyadanam_desc}
         </p>
       </div>
@@ -91,13 +91,13 @@ export const FamilySection: React.FC<FamilySectionProps> = ({ language }) => {
         <div className="grid grid-cols-1 gap-3 text-gray-800">
           {/* Bride's Parents: Preserved exactly */}
           <div className="p-4 rounded-xl bg-[#FFF8EF] border border-[#E8DCC8] space-y-2">
-            <span className="text-[16px] sm:text-[17px] font-black text-[#7B1E2B] block uppercase tracking-wide">
+            <span className="text-[17px] sm:text-[18px] font-black text-[#7B1E2B] block uppercase tracking-wide">
               {t.label_bride_parents}
             </span>
             <span className="text-[19px] sm:text-[22px] font-black text-gray-950 block font-telugutitle leading-snug">
               {t.bride_parents_names}
             </span>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 border-t border-[#E8DCC8]/70 text-[16px] sm:text-[17px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 border-t border-[#E8DCC8]/70 text-[17px] sm:text-[18px]">
               <div>
                 <span className="font-bold text-gray-600 mr-1.5">{t.bride_father_label}</span>
                 <span className="font-extrabold text-gray-900">{t.bride_father_name}</span>
@@ -111,13 +111,13 @@ export const FamilySection: React.FC<FamilySectionProps> = ({ language }) => {
 
           {/* Groom's Parents: Punna Satyanarayana & Punna Vajramma */}
           <div className="p-4 rounded-xl bg-[#FFF8EF] border border-[#E8DCC8] space-y-2">
-            <span className="text-[16px] sm:text-[17px] font-black text-[#7B1E2B] block uppercase tracking-wide">
+            <span className="text-[17px] sm:text-[18px] font-black text-[#7B1E2B] block uppercase tracking-wide">
               {t.label_groom_parents}
             </span>
             <span className="text-[19px] sm:text-[22px] font-black text-gray-950 block font-telugutitle leading-snug">
               {t.groom_parent_name}
             </span>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 border-t border-[#E8DCC8]/70 text-[16px] sm:text-[17px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 border-t border-[#E8DCC8]/70 text-[17px] sm:text-[18px]">
               <div>
                 <span className="font-bold text-gray-600 mr-1.5">{t.groom_father_label}</span>
                 <span className="font-extrabold text-gray-900">{t.groom_father_name}</span>
@@ -147,7 +147,7 @@ export const FamilySection: React.FC<FamilySectionProps> = ({ language }) => {
               key={member.id}
               className="p-3.5 sm:p-4 rounded-xl bg-white border border-[#E8DCC8] shadow-2xs text-center flex items-center justify-center min-h-[64px]"
             >
-              <span className="text-[17px] sm:text-[19px] font-black text-[#7B1E2B] font-telugutitle leading-snug">
+              <span className="text-[18px] sm:text-[19px] font-black text-[#7B1E2B] font-telugutitle leading-snug">
                 {member.names[language]}
               </span>
             </div>
