@@ -95,7 +95,7 @@ export const DevotionalHero: React.FC<DevotionalHeroProps> = ({ language }) => {
         {t.hero_invocation}
       </h1>
 
-      <p className="text-[16px] sm:text-[18px] font-bold text-[#855F1B] tracking-wide my-2">
+      <p className="text-[17px] sm:text-[18px] font-bold text-[#855F1B] tracking-wide my-2">
         {t.hero_slokam}
       </p>
 
@@ -114,20 +114,20 @@ export const DevotionalHero: React.FC<DevotionalHeroProps> = ({ language }) => {
         <div className="text-[28px] sm:text-[34px] font-black text-[#7B1E2B] tracking-wide font-telugutitle leading-normal">
           {t.groom_name}
         </div>
-        <div className="text-[17px] sm:text-[19px] font-semibold text-gray-700 italic tracking-wider pt-1">
+        <div className="text-[18px] sm:text-[19px] font-semibold text-gray-700 italic tracking-wider pt-1">
           {t.ceremony_sub}
         </div>
       </div>
 
       {/* Auspicious Muhurtham Banner */}
       <div className="rounded-xl gold-gradient-bg border-2 border-[#C6A15B] p-4 sm:p-5 my-3.5 shadow-xs">
-        <span className="inline-block px-4 py-1.5 rounded-full bg-[#7B1E2B] text-[#F7EDD4] text-[15px] font-extrabold uppercase tracking-wider mb-2">
+        <span className="inline-block px-4 py-1.5 rounded-full bg-[#7B1E2B] text-[#F7EDD4] text-[17px] font-extrabold uppercase tracking-wider mb-2">
           {t.badge_muhurtham}
         </span>
         <div className="text-[22px] sm:text-[26px] font-black text-[#7B1E2B] font-telugutitle leading-snug">
           {t.hero_muhurtham_date}
         </div>
-        <div className="text-[17px] sm:text-[19px] text-[#3D2214] mt-1.5 font-bold">
+        <div className="text-[18px] sm:text-[19px] text-[#3D2214] mt-1.5 font-bold">
           {t.hero_muhurtham_lagna}
         </div>
       </div>
@@ -135,7 +135,7 @@ export const DevotionalHero: React.FC<DevotionalHeroProps> = ({ language }) => {
       {/* Jump Anchor Button to Muhurtham and Event Details */}
       <a
         href="#events-section"
-        className="inline-flex items-center justify-center space-x-2 w-full min-h-[50px] py-3.5 px-4 rounded-xl maroon-gradient-bg text-white font-bold text-[17px] sm:text-[18px] shadow-sm hover:brightness-110 active:scale-[0.99] transition cursor-pointer"
+        className="inline-flex items-center justify-center space-x-2 w-full min-h-[50px] py-3.5 px-4 rounded-xl maroon-gradient-bg text-white font-bold text-[18px] sm:text-[18px] shadow-sm hover:brightness-110 active:scale-[0.99] transition cursor-pointer"
       >
         <span>{t.cta_view_details}</span>
       </a>
