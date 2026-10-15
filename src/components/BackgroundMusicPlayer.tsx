@@ -9,7 +9,7 @@ interface BackgroundMusicPlayerProps {
 
 /**
  * Persistent background music control.
- * The supplied track must be available at public/assets/wedding-background.mp3.
+ * Uses the exact Gemini-generated MP3 supplied by the user.
  * Playback starts only after the visitor presses Play to respect browser policies.
  */
 export function BackgroundMusicPlayer({ language }: BackgroundMusicPlayerProps) {
@@ -20,7 +20,8 @@ export function BackgroundMusicPlayer({ language }: BackgroundMusicPlayerProps) 
   const [playbackError, setPlaybackError] = useState(false);
   const t = translations[language];
 
-  const audioSrc = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/assets/wedding-background.mp3`;
+  // Exact user-supplied Gemini MP3, hosted as a stable public audio asset.
+  const audioSrc = 'https://cdn.openart.ai/openart-uploads/production/attachment-transfers/ef0f86a7fe039a9a843be53fee284a58a65e23a95a899b9be2f5e14c9d60bef5.mp3';
 
   useEffect(() => {
     const audio = audioRef.current;
