@@ -66,11 +66,11 @@ export const HaldiScene: React.FC<HaldiSceneProps> = ({ language }) => {
         <div className="flex items-center justify-between border-b border-[#F0E2D0] pb-2.5 relative z-10">
           <div className="flex items-center space-x-2">
             <span className="text-2xl" role="img" aria-label="Flower">🌼</span>
-            <span className="text-[15px] sm:text-[16px] uppercase tracking-widest text-[#925400] font-black font-telugutitle">
+            <span className="text-[17px] sm:text-[18px] uppercase tracking-wide text-[#925400] font-black font-telugutitle">
               02 • {t.event_haldi_tag}
             </span>
           </div>
-          <span className="text-[14px] sm:text-[15px] font-black px-3.5 py-1 rounded-full bg-amber-100 text-amber-950">
+          <span className="text-[16px] sm:text-[17px] font-black px-3.5 py-1 rounded-full bg-amber-100 text-amber-950">
             {t.event_haldi_tag}
           </span>
         </div>
@@ -88,7 +88,7 @@ export const HaldiScene: React.FC<HaldiSceneProps> = ({ language }) => {
             <h2 className="text-[24px] sm:text-[28px] font-black text-[#7B1E2B] font-telugutitle mt-3 leading-normal">
               {t.event_haldi_title}
             </h2>
-            <p className="text-[16px] sm:text-[18px] text-amber-950 font-semibold italic flex items-center justify-center gap-1.5 mt-1.5">
+            <p className="text-[17px] sm:text-[18px] text-amber-950 font-semibold italic flex items-center justify-center gap-1.5 mt-1.5">
               <Sun className="w-5 h-5 text-amber-700 shrink-0" aria-hidden="true" />
               <span>
                 {language === 'te' 
@@ -112,7 +112,7 @@ export const HaldiScene: React.FC<HaldiSceneProps> = ({ language }) => {
                 <div className="font-black text-[#7B1E2B] text-[20px] sm:text-[24px] font-telugutitle leading-snug">
                   {t.haldi_date}
                 </div>
-                <div className="text-[17px] sm:text-[19px] font-extrabold text-gray-900 mt-0.5">
+                <div className="text-[18px] sm:text-[19px] font-extrabold text-gray-900 mt-0.5">
                   {t.haldi_time}
                 </div>
               </div>
@@ -127,7 +127,7 @@ export const HaldiScene: React.FC<HaldiSceneProps> = ({ language }) => {
                 <div className="font-black text-gray-950 text-[20px] sm:text-[24px] font-telugutitle leading-snug">
                   {t.haldi_venue_name}
                 </div>
-                <div className="text-[16px] sm:text-[18px] text-gray-800 leading-relaxed font-medium mt-1">
+                <div className="text-[17px] sm:text-[18px] text-gray-800 leading-relaxed font-medium mt-1">
                   {t.haldi_venue_address}
                 </div>
               </div>
@@ -140,7 +140,7 @@ export const HaldiScene: React.FC<HaldiSceneProps> = ({ language }) => {
               href={eventData.mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full min-h-[50px] py-3.5 px-4 rounded-xl maroon-gradient-bg text-white text-[16px] sm:text-[17px] font-bold flex items-center justify-center space-x-2 shadow-sm hover:brightness-110 active:scale-[0.99] transition cursor-pointer"
+              className="w-full min-h-[50px] py-3.5 px-4 rounded-xl maroon-gradient-bg text-white text-[17px] sm:text-[18px] font-bold flex items-center justify-center space-x-2 shadow-sm hover:brightness-110 active:scale-[0.99] transition cursor-pointer"
             >
               <Navigation className="w-5 h-5" aria-hidden="true" />
               <span>{t.btn_get_directions}</span>
@@ -149,7 +149,7 @@ export const HaldiScene: React.FC<HaldiSceneProps> = ({ language }) => {
             <button
               type="button"
               onClick={handleDownloadCalendar}
-              className="w-full min-h-[50px] py-3 px-4 rounded-xl border-2 border-[#C6A15B] bg-[#FFFDF8] text-[#7B1E2B] text-[16px] sm:text-[17px] font-extrabold flex items-center justify-center space-x-2 hover:bg-[#FAF1E2] active:scale-[0.99] transition cursor-pointer"
+              className="w-full min-h-[50px] py-3 px-4 rounded-xl border-2 border-[#C6A15B] bg-[#FFFDF8] text-[#7B1E2B] text-[17px] sm:text-[18px] font-extrabold flex items-center justify-center space-x-2 hover:bg-[#FAF1E2] active:scale-[0.99] transition cursor-pointer"
             >
               {downloaded ? (
                 <>
