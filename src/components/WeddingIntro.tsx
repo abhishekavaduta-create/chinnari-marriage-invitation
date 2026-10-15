@@ -10,7 +10,7 @@ type WeddingIntroProps = {
 const TEMPLE_IMAGE =
   'https://lh3.googleusercontent.com/aida/AEtjO1UHHi5fJbmmovjR1i4bsR0wWsXi8Fn9x4jSl3yVLbNIVFgSB2pO68etdVNsj0ehxJ02d9UQxXcWKIViHpoBptB5T_38uBgqEavKoyYHf17914YMlfySG4T2EosOu2oJMmC4JRDe9P0CbQTxjM0B6RGaAs8AKac-3-WCnkyYY6zeVCBjsVOdxEqK_PsL-oFXCqJK1iXAC8a0Ni0kzqv8ce-kYMO06zOTyZqEspA2LFCb0DLmNISC18CWKWQP';
 
-const GANESHA_IMAGE = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/assets/ganesha-idol-cutout.webp`;
+const GANESHA_IMAGE = 'https://cdn.openart.ai/openart-uploads/production/attachment-transfers/ce05ca5e61f3b6498f0da0399de5ecacb380c9fc1f59db0b186adba6ac820935.webp';
 
 const CURTAIN_IMAGE =
   'https://lh3.googleusercontent.com/aida/AEtjO1XnaZC1VikLw6TAk_PCoY_z19FQFu81lTC93uldzeNHJKcbaVi_AkwUOM3HveyM2uSgVnnCNal7jSJidhf7nAn5tn4-NGzy0KJApi72So6MHrI2hfKnN1vv2u3F0ODflnxKttKPKRNIRqm33DwYPIxni82jd_dXHXgz6UQRsFlQ4KphP-DhCtw8O-yqT9eOj3UI3O0n5wdUyNjCQ4WLUycNOu9NWRhwkhOsvNVy75w_IsObfUWHPK-TTio';
