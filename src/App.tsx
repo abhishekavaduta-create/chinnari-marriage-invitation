@@ -37,8 +37,8 @@ export default function App() {
         <PetalShower enabled={petalsEnabled} />
 
         {/* Sticky Top Bar with Language Selector */}
-        <Header 
-          language={language} 
+        <Header
+          language={language}
           onLanguageChange={setLanguage}
           petalsEnabled={petalsEnabled}
           onTogglePetals={() => setPetalsEnabled((prev) => !prev)}
@@ -47,55 +47,41 @@ export default function App() {
         {/* Main Single-Column Mobile-First Container (360px - 430px ideal target) */}
         <main className="w-[calc(100%-24px)] max-w-lg flex-1 px-3 sm:px-4 py-4 sm:py-5 space-y-4 bg-[#FFFCF6] border-x border-[#C6A15B] shadow-[0_0_36px_rgba(0,0,0,0.18)]">
           {/* Devotional Hero Section with Sri Lakshmi Narasimha Swamy */}
-          <DevotionalHero 
-            language={language} 
-          />
+          <DevotionalHero language={language} />
 
           <SceneTransition label={language === 'te' ? 'కుటుంబ ఆశీస్సులు' : 'Family Blessings'} />
 
           {/* Primary Family Hosts (Pinni & Babai) & Lineage */}
-          <FamilySection 
-            language={language} 
-          />
+          <FamilySection language={language} />
 
           <div id="events-section" className="space-y-4 pt-1">
             <SceneTransition label={language === 'te' ? 'శుభ ఘట్టాలు • 01' : 'Ceremony Chapter • 01'} />
 
             {/* Scene 1: Engagement Ceremony (Interlocking Rings) */}
-            <EngagementScene 
-              language={language} 
-            />
+            <EngagementScene language={language} />
 
             <SceneTransition label={language === 'te' ? 'శుభ ఘట్టాలు • 02' : 'Ceremony Chapter • 02'} />
 
             {/* Scene 2: Pasupu & Mangala Snanam (Turmeric & Marigolds) */}
-            <HaldiScene 
-              language={language} 
-            />
+            <HaldiScene language={language} />
 
             <SceneTransition label={language === 'te' ? 'శుభ ఘట్టాలు • 03' : 'Ceremony Chapter • 03'} />
 
             {/* Scene 3: Kalyana Mahotsavam (Mangala Vadyalu & Mandapam) */}
-            <MarriageScene 
-              language={language} 
-            />
+            <MarriageScene language={language} />
           </div>
 
           <SceneTransition label={language === 'te' ? 'శుభాకాంక్షలు' : 'Divine Blessings'} />
 
           {/* Heartfelt Blessings and Traditional Closing */}
-          <BlessingFooter 
-            language={language} 
-          />
+          <BlessingFooter language={language} />
         </main>
 
-        {/* Background wedding music: starts only after visitor interaction */}
-        <BackgroundMusicPlayer language={language} />
+        {/* Start soundtrack as soon as the invitation mounts; carry it through the intro. */}
+        <BackgroundMusicPlayer language={language} introVisible={showIntro} />
 
         {/* Fixed Bottom Action Bar for WhatsApp Sharing */}
-        <WhatsAppShareBar 
-          language={language} 
-        />
+        <WhatsAppShareBar language={language} />
       </div>
       {showIntro && <WeddingIntro onComplete={() => setShowIntro(false)} />}
     </>
