@@ -11,6 +11,7 @@ import { BlessingFooter } from './components/BlessingFooter';
 import { WhatsAppShareBar } from './components/WhatsAppShareBar';
 import { PetalShower } from './components/PetalShower';
 import { WeddingIntro } from './components/WeddingIntro';
+import { BackgroundMusicPlayer } from './components/BackgroundMusicPlayer';
 
 function shouldShowWeddingIntro(): boolean {
   if (typeof window === 'undefined') return false;
@@ -87,6 +88,9 @@ export default function App() {
             language={language} 
           />
         </main>
+
+        {/* Background wedding music: starts only after visitor interaction */}
+        <BackgroundMusicPlayer language={language} />
 
         {/* Fixed Bottom Action Bar for WhatsApp Sharing */}
         <WhatsAppShareBar 
