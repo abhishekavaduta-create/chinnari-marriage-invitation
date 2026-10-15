@@ -41,7 +41,7 @@ export const WhatsAppShareBar: React.FC<WhatsAppShareBarProps> = ({ language }) 
         <button
           type="button"
           onClick={handleShare}
-          className="flex-1 min-h-[50px] py-3 px-4 rounded-xl bg-[#075E54] text-white text-[16px] sm:text-[17px] font-bold flex items-center justify-center space-x-2 shadow-sm hover:bg-[#128C7E] active:scale-[0.99] transition cursor-pointer"
+          className="flex-1 min-h-[50px] py-3 px-4 rounded-xl bg-[#075E54] text-white text-[17px] sm:text-[18px] font-bold flex items-center justify-center space-x-2 shadow-sm hover:bg-[#128C7E] active:scale-[0.99] transition cursor-pointer"
         >
           {/* WhatsApp Brand SVG */}
           <svg className="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
