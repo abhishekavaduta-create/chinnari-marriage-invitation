@@ -123,8 +123,8 @@ export function BackgroundMusicPlayer({ language }: BackgroundMusicPlayerProps) 
       {playbackError && (
         <p role="status" className="max-w-60 rounded-lg border border-[#C6A15B] bg-[#FFF8EF] px-3 py-2 text-xs font-semibold text-[#58111D] shadow-md">
           {language === 'te'
-            ? 'సంగీత ఫైల్ అందుబాటులో లేదు. MP3 ను public/assets/wedding-background.mp3 లో ఉంచండి.'
-            : 'Music file unavailable. Add the MP3 at public/assets/wedding-background.mp3.'}
+            ? 'సంగీత ఫైల్ లోడ్ కాలేదు. ఇంటర్నెట్ కనెక్షన్ తనిఖీ చేసి మళ్లీ ప్రయత్నించండి.'
+            : 'Music file could not be loaded. Check your connection and try again.'}
         </p>
       )}
 
