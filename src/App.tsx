@@ -22,7 +22,6 @@ function shouldShowWeddingIntro(): boolean {
 
 export default function App() {
   const [language, setLanguage] = useState<Language>('te');
-  const [petalsEnabled, setPetalsEnabled] = useState(true);
   const [showIntro, setShowIntro] = useState(shouldShowWeddingIntro);
 
   // Sync document html lang attribute
@@ -33,15 +32,13 @@ export default function App() {
   return (
     <>
       <div className="min-h-screen flex flex-col items-center bg-[#5E1119] text-[#2D1518] relative selection:bg-[#7B1E2B] selection:text-[#FFF8EF] overflow-x-hidden pt-2 pb-4">
-        {/* Background Petal Shower (Respects prefers-reduced-motion) */}
-        <PetalShower enabled={petalsEnabled} />
+        {/* Decorative petals remain enabled; their toggle is not needed in the invitation header. */}
+        <PetalShower enabled={true} />
 
-        {/* Sticky Top Bar with Language Selector */}
+        {/* Sticky Top Bar with a compact language selector */}
         <Header
           language={language}
           onLanguageChange={setLanguage}
-          petalsEnabled={petalsEnabled}
-          onTogglePetals={() => setPetalsEnabled((prev) => !prev)}
         />
 
         {/* Main Single-Column Mobile-First Container (360px - 430px ideal target) */}
