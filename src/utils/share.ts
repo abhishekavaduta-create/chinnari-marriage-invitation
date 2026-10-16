@@ -13,6 +13,14 @@ const isTemporaryAiStudioUrl = (value: string): boolean => {
 const withoutTrailingSlash = (value: string): string =>
   value.endsWith('/') ? value.slice(0, -1) : value;
 
+// Bump this value when social preview metadata changes so WhatsApp fetches a
+// fresh page URL instead of reusing a previously cached text-only preview.
+const withSharePreviewVersion = (value: string): string => {
+  const url = new URL(value);
+  url.searchParams.set('share', '2');
+  return url.toString();
+};
+
 /**
  * Returns a real public invitation URL only.
  * Never guesses a published URL by rewriting an AI Studio preview hostname.
@@ -27,7 +35,7 @@ export function getPermanentInvitationUrl(): string | null {
     !envUrl.includes('MY_APP_URL') &&
     !isTemporaryAiStudioUrl(envUrl)
   ) {
-    return withoutTrailingSlash(envUrl);
+    return withSharePreviewVersion(withoutTrailingSlash(envUrl));
   }
 
   if (typeof window === 'undefined') return null;
@@ -39,7 +47,7 @@ export function getPermanentInvitationUrl(): string | null {
 
   const pathname = window.location.pathname;
   const cleanPath = pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
-  return currentUrl + cleanPath;
+  return withSharePreviewVersion(currentUrl + cleanPath);
 }
 
 /**
