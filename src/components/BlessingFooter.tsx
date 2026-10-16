@@ -43,9 +43,6 @@ export const BlessingFooter: React.FC<BlessingFooterProps> = ({ language }) => {
           {t.footer_message}
         </p>
 
-        <div className="text-[17px] text-gray-600 pt-2 font-medium">
-          {t.copyright}
-        </div>
       </footer>
     </div>
   );
