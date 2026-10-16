@@ -3,8 +3,8 @@ import { Language } from '../types/wedding';
 const isTemporaryAiStudioUrl = (value: string): boolean => {
   try {
     const hostname = new URL(value).hostname.toLowerCase();
-    // Build-mode development/preview hosts are not permanent guest-facing links.
-    return hostname.startsWith('ais-dev-') || hostname.startsWith('ais-pre-');
+    // Internal AI Studio preview and technical Cloud Run hostnames are not guest-facing links.
+    return hostname.startsWith('ais-dev-') || hostname.startsWith('ais-pre-') || hostname.endsWith('.run.app');
   } catch {
     return true;
   }
