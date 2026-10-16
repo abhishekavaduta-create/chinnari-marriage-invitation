@@ -93,7 +93,7 @@ export const MarriageScene: React.FC<MarriageSceneProps> = ({ language }) => {
               <Bell className="w-5 h-5 text-[#855F1B] shrink-0" aria-hidden="true" />
               <span>
                 {language === 'te' 
-                  ? 'మాంగల్య ధారణ • జీలకర్ర బెల్లం సుముహూర్తం' 
+                  ? 'మంగళసూత్రం కట్టడం • జీలకర్ర బెల్లం' 
                   : 'Sacred Mangalya Dharana & Holy Vows'}
               </span>
             </p>
