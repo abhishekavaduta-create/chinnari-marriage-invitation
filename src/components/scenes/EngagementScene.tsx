@@ -4,7 +4,7 @@ import { translations } from '../../data/translations';
 import { InterlockingRings } from '../decorations/InterlockingRings';
 import { downloadIcsFile } from '../../utils/calendar';
 import { weddingEvents } from '../../data/weddingData';
-import { MapPin, Clock, Navigation, Calendar, Check, Sparkles } from 'lucide-react';
+import { MapPin, Clock, Navigation, Calendar, Check, Sparkles, BookOpen } from 'lucide-react';
 
 interface EngagementSceneProps {
   language: Language;
@@ -97,6 +97,14 @@ export const EngagementScene: React.FC<EngagementSceneProps> = ({ language }) =>
                   : 'Auspicious Exchange of Rings & Blessings'}
               </span>
             </p>
+
+            {/* Additional ceremony held as part of the same engagement gathering */}
+            <div className="mt-3 mx-auto flex w-fit max-w-full items-center gap-2.5 rounded-xl border border-[#C6A15B] bg-[#FFF8EF] px-4 py-2.5 text-left shadow-xs">
+              <BookOpen className="h-5 w-5 shrink-0 text-[#855F1B]" aria-hidden="true" />
+              <span className="text-[16px] sm:text-[17px] font-bold text-[#7B1E2B]">
+                {t.engagement_lagna_patrika_title}
+              </span>
+            </div>
           </div>
         </div>
 

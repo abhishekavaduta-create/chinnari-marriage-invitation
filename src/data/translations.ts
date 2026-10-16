@@ -47,6 +47,7 @@ export const translations = {
     // Engagement
     event_engagement_title: "నిశ్చితార్థ వేడుక",
     event_engagement_tag: "నిశ్చితార్థం",
+    engagement_lagna_patrika_title: "లగ్న పత్రిక కార్యక్రమం",
     engagement_date: "ఆదివారం, 1 నవంబర్ 2026",
     engagement_time: "ఉదయం 11:15 గంటలకు",
     engagement_venue_name: "పెద్దబొమ్మ వారి ఇల్లు",
@@ -144,6 +145,7 @@ export const translations = {
     // Engagement
     event_engagement_title: "Engagement Ceremony",
     event_engagement_tag: "Engagement",
+    engagement_lagna_patrika_title: "Lagna Patrika Ceremony",
     engagement_date: "Sunday, 1 November 2026",
     engagement_time: "11:15 AM Onwards",
     engagement_venue_name: "Peddabomma Residence",
