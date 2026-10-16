@@ -90,6 +90,7 @@ export const translations = {
     // Sharing & Audio
     btn_whatsapp_share: "వాట్సాప్‌లో ఆహ్వానం పంపండి",
     share_copied: "లింక్ కాపీ చేయబడింది!",
+    share_publish_first: "ఇది ప్రివ్యూ లింక్. పబ్లిక్ ఆహ్వాన లింక్ కోసం ముందుగా Publish చేయండి.",
     calendar_saved: "క్యాలెండర్ ఈవెంట్ డౌన్‌లోడ్ చేయబడింది",
     audio_play: "మంగళ వాయిద్యం ప్లే చేయండి",
     audio_pause: "మంగళ వాయిద్యం ఆపండి",
@@ -186,6 +187,7 @@ export const translations = {
     // Sharing & Audio
     btn_whatsapp_share: "Share Invitation on WhatsApp",
     share_copied: "Link copied to clipboard!",
+    share_publish_first: "This is a preview link. Publish the invitation to get a public share link.",
     calendar_saved: "Calendar event downloaded",
     audio_play: "Play Ceremonial Music",
     audio_pause: "Pause Music",
