@@ -92,7 +92,7 @@ export const HaldiScene: React.FC<HaldiSceneProps> = ({ language }) => {
               <Sun className="w-5 h-5 text-amber-700 shrink-0" aria-hidden="true" />
               <span>
                 {language === 'te' 
-                  ? 'పసుపు కొమ్ముల పూజ • మంగళ స్నానాలు' 
+                  ? 'పసుపు పూజ • మంగళస్నానం' 
                   : 'Sacred Turmeric Rituals & Mangala Snanam'}
               </span>
             </p>

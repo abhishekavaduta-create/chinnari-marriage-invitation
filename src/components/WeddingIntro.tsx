@@ -192,7 +192,7 @@ export function WeddingIntro({ onComplete }: WeddingIntroProps) {
             initial={false}
             animate={{ opacity: stage === 6 ? 1 : 0, y: stage === 6 ? 0 : 12 }}
             transition={{ duration: 0.9, ease: 'easeOut', delay: stage === 6 ? 1.75 : 0 }}
-          >అవధూత వారి వివాహ ఆహ్వానం</motion.p>
+          >అవధూత వారి పెళ్లి పత్రిక</motion.p>
           <motion.div
             className="wedding-intro__title-divider"
             initial={false}
