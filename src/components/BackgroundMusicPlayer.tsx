@@ -30,7 +30,6 @@ export function BackgroundMusicPlayer({
   const playbackAttemptRef = useRef(false);
   const userPausedRef = useRef(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [userPaused, setUserPaused] = useState(false);
   const [volume, setVolume] = useState(0.28);
   const [showVolume, setShowVolume] = useState(false);
   const [autoplayBlocked, setAutoplayBlocked] = useState(false);
@@ -74,14 +73,12 @@ export function BackgroundMusicPlayer({
 
     if (!audio.paused) {
       userPausedRef.current = true;
-      setUserPaused(true);
       audio.pause();
       setIsPlaying(false);
       return;
     }
 
     userPausedRef.current = false;
-    setUserPaused(false);
     void playMusic();
   }, [playMusic]);
 
@@ -94,7 +91,11 @@ export function BackgroundMusicPlayer({
 
     // If autoplay is blocked, a visitor's first gesture anywhere starts the
     // soundtrack. They do not need to find a separate Play control.
-    const resumeOnGesture = () => {
+    const resumeOnGesture = (event: Event) => {
+      const target = event.target;
+      // The navigation play/pause button handles its own gesture; don't race it
+      // with the global autoplay-resume listener.
+      if (target instanceof Element && target.closest('[data-music-toggle]')) return;
       if (!userPausedRef.current) void playMusic();
     };
     window.addEventListener('pointerdown', resumeOnGesture, true);
