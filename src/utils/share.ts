@@ -1,45 +1,53 @@
 import { Language } from '../types/wedding';
 
+const isTemporaryAiStudioUrl = (value: string): boolean => {
+  try {
+    const hostname = new URL(value).hostname.toLowerCase();
+    // Build-mode development/preview hosts are not the permanent invitation link.
+    return hostname.startsWith('ais-dev-') || hostname.startsWith('ais-pre-');
+  } catch {
+    return true;
+  }
+};
+
 /**
- * Derives the canonical/public invitation URL.
- * Never shares temporary private dev URLs (e.g. ais-dev-*),
- * automatically maps to the shared production link (ais-pre-*)
- * or the configured VITE_APP_URL.
+ * Returns a real public invitation URL only.
+ * Never guesses a published URL by rewriting an AI Studio preview hostname.
+ * Configure VITE_APP_URL to the final published/custom invitation URL when needed.
  */
-export function getPermanentInvitationUrl(): string {
-  // 1. Check environment variable if injected
+export function getPermanentInvitationUrl(): string | null {
   const envUrl = import.meta.env.VITE_APP_URL;
-  if (envUrl && typeof envUrl === 'string' && !envUrl.includes('MY_APP_URL') && envUrl.startsWith('http')) {
-    return envUrl;
+
+  if (
+    typeof envUrl === 'string' &&
+    envUrl.startsWith('https://') &&
+    !envUrl.includes('MY_APP_URL') &&
+    !isTemporaryAiStudioUrl(envUrl)
+  ) {
+    return envUrl.replace(/\/+$/, '');
   }
 
-  // 2. Client-side location inspection
-  if (typeof window !== 'undefined') {
-    const origin = window.location.origin;
-    // Map AI Studio development preview to shared public preview
-    if (origin.includes('ais-dev-')) {
-      return origin.replace('ais-dev-', 'ais-pre-');
-    }
-    // Standard domain or production domain
-    return `${origin}${window.location.pathname.replace(/\/$/, '')}`;
+  if (typeof window === 'undefined') return null;
+
+  const currentUrl = window.location.origin;
+  if (isTemporaryAiStudioUrl(currentUrl)) {
+    return null;
   }
 
-  return 'https://ais-pre-c2uqh53cxl4q67eokyr7gu-206220364123.asia-southeast1.run.app';
+  return \`\${currentUrl}\${window.location.pathname.replace(/\\/$/, '')}\`;
 }
 
 /**
- * Prepares the WhatsApp share link with appropriate localized copy
- * using the verified public invitation URL.
+ * Prepares the localized WhatsApp message only when the current URL is public.
  */
-export function getWhatsAppShareUrl(lang: Language): string {
-  const isTelugu = lang === 'te';
+export function getWhatsAppShareUrl(lang: Language): string | null {
   const publicUrl = getPermanentInvitationUrl();
+  if (!publicUrl) return null;
 
-  const message = isTelugu
-    ? "శ్రీ లక్ష్మీ నరసింహ స్వామి ఆశీస్సులతో... చి॥ల॥సౌ॥ అవధూత ధనలక్ష్మి & చి॥ పున్నా శేఖర్ ల కల్యాణ మహోత్సవ ఆహ్వాన పత్రిక. వేదిక & ముహూర్తం వివరాల కొరకు చూడండి:\n"
-    : "With the Divine Blessings of Sri Lakshmi Narasimha Swamy, you are cordially invited to celebrate the wedding ceremony of Chi. La. Sow. Avaduta Dhanlaxmi & Chi. Punna Shekar:\n";
+  const message =
+    lang === 'te'
+      ? "శ్రీ లక్ష్మీ నరసింహ స్వామి ఆశీస్సులతో... చి॥ల॥సౌ॥ అవధూత ధనలక్ష్మి & చి॥ పున్నా శేఖర్ ల కల్యాణ మహోత్సవ ఆహ్వాన పత్రిక. వేదిక & ముహూర్తం వివరాల కొరకు చూడండి:\\n"
+      : "With the Divine Blessings of Sri Lakshmi Narasimha Swamy, you are cordially invited to celebrate the wedding ceremony of Chi. La. Sow. Avaduta Dhanlaxmi & Chi. Punna Shekar:\\n";
 
-  const fullText = `${message}${publicUrl}`;
-
-  return `https://api.whatsapp.com/send?text=${encodeURIComponent(fullText)}`;
+  return \`https://api.whatsapp.com/send?text=\${encodeURIComponent(\`\${message}\${publicUrl}\`)}\`;
 }
