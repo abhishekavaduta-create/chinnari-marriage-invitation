@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Language } from './types/wedding';
 import { Header } from './components/Header';
 import { DevotionalHero } from './components/DevotionalHero';
@@ -11,7 +11,7 @@ import { BlessingFooter } from './components/BlessingFooter';
 import { WhatsAppShareBar } from './components/WhatsAppShareBar';
 import { PetalShower } from './components/PetalShower';
 import { WeddingIntro } from './components/WeddingIntro';
-import { BackgroundMusicPlayer } from './components/BackgroundMusicPlayer';
+import { BackgroundMusicPlayer, type BackgroundMusicControls } from './components/BackgroundMusicPlayer';
 
 function shouldShowWeddingIntro(): boolean {
   if (typeof window === 'undefined') return false;
@@ -23,6 +23,10 @@ function shouldShowWeddingIntro(): boolean {
 export default function App() {
   const [language, setLanguage] = useState<Language>('te');
   const [showIntro, setShowIntro] = useState(shouldShowWeddingIntro);
+  const [musicControls, setMusicControls] = useState<BackgroundMusicControls | null>(null);
+  const handleMusicControlsChange = useCallback((controls: BackgroundMusicControls) => {
+    setMusicControls(controls);
+  }, []);
 
   // Sync document html lang attribute
   useEffect(() => {
@@ -39,6 +43,7 @@ export default function App() {
         <Header
           language={language}
           onLanguageChange={setLanguage}
+          musicControls={musicControls}
         />
 
         {/* Main Single-Column Mobile-First Container (360px - 430px ideal target) */}
@@ -75,7 +80,11 @@ export default function App() {
         </main>
 
         {/* Start soundtrack as soon as the invitation mounts; carry it through the intro. */}
-        <BackgroundMusicPlayer language={language} introVisible={showIntro} />
+        <BackgroundMusicPlayer
+          language={language}
+          introVisible={showIntro}
+          onControlsChange={handleMusicControlsChange}
+        />
 
         {/* Fixed Bottom Action Bar for WhatsApp Sharing */}
         <WhatsAppShareBar language={language} />
