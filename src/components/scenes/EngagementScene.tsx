@@ -93,7 +93,7 @@ export const EngagementScene: React.FC<EngagementSceneProps> = ({ language }) =>
               <Sparkles className="w-5 h-5 text-[#855F1B] shrink-0" aria-hidden="true" />
               <span>
                 {language === 'te' 
-                  ? 'శుభ ముహూర్త వేళ తాంబూలాలు & ఉంగరాలు మార్పిడి' 
+                  ? 'తాంబూలాలు, ఉంగరాలు మార్చుకునే వేడుక' 
                   : 'Auspicious Exchange of Rings & Blessings'}
               </span>
             </p>
