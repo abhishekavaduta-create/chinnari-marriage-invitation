@@ -15,15 +15,15 @@ export const translations = {
     // Cordially Inviting (Family Hosts)
     label_primary_hosts: "ఆహ్వానిస్తున్నవారు",
     host_names: "పెద్దబొమ్మ రాజేష్ & పెద్దబొమ్మ సునీత",
-    host_babai_label: "Uncle – Peddabomma Rajesh",
-    host_pinni_label: "Aunt – Peddabomma Sunitha",
-    host_relation: "(Bride's Uncle & Aunt)",
+    host_babai_label: "బాబాయి – పెద్దబొమ్మ రాజేష్",
+    host_pinni_label: "పిన్ని – పెద్దబొమ్మ సునీత",
+    host_relation: "(పెళ్లికూతురి బాబాయి మరియు పిన్ని)",
     host_invitation_text: "మా ఇంట జరిగే పెళ్లికి మీరు కుటుంబంతో కలిసి వచ్చి, కొత్త జంటను మనసారా ఆశీర్వదించాలని కోరుకుంటున్నాం.",
 
     // Kanyadanam
     label_kanyadanam_by: "కన్యాదానం చేసే వారు",
     kanyadanam_names: "పెద్దబొమ్మ రాజేష్ & పెద్దబొమ్మ సునీత",
-    kanyadanam_relation: "(Bride's Uncle & Aunt)",
+    kanyadanam_relation: "(పెళ్లికూతురి బాబాయి మరియు పిన్ని)",
     kanyadanam_desc: "కన్యాదానం నిర్వహించేవారు",
 
     // Parents
