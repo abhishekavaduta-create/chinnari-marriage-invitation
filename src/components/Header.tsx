@@ -18,7 +18,7 @@ export const Header: React.FC<HeaderProps> = ({
   const t = translations[language];
 
   return (
-    <header className="sticky top-0 z-50 relative flex w-[calc(100%-24px)] max-w-lg items-center gap-2 border-x border-b border-[#C6A15B] bg-[#FFF8EF]/95 px-2.5 py-2.5 shadow-xs backdrop-blur-md sm:gap-3 sm:px-4">
+    <header className="sticky top-0 z-50 flex w-[calc(100%-24px)] max-w-lg items-center gap-2 border-x border-b border-[#C6A15B] bg-[#FFF8EF]/95 px-2.5 py-2.5 shadow-xs backdrop-blur-md sm:gap-3 sm:px-4">
       {/* Invitation title uses the remaining width. */}
       <div className="min-w-0 flex-1">
         <span className="block truncate font-telugutitle text-[14px] font-extrabold leading-snug tracking-normal text-[#7B1E2B] sm:text-[18px]">
@@ -33,6 +33,7 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               type="button"
               onClick={musicControls.togglePlayback}
+              data-music-toggle
               className={'inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7B1E2B] ' + (musicControls.isPlaying ? 'border-[#7B1E2B] bg-[#7B1E2B] text-white' : 'border-[#C6A15B] bg-[#FAF1E2] text-[#7B1E2B] hover:bg-[#F7EDD4]')}
               aria-label={musicControls.isPlaying ? t.audio_pause : t.audio_play}
               title={musicControls.isPlaying ? t.audio_pause : t.audio_play}
