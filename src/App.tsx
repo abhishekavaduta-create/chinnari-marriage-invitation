@@ -3,7 +3,6 @@ import { Language } from './types/wedding';
 import { Header } from './components/Header';
 import { DevotionalHero } from './components/DevotionalHero';
 import { FamilySection } from './components/FamilySection';
-import { EngagementScene } from './components/scenes/EngagementScene';
 import { HaldiScene } from './components/scenes/HaldiScene';
 import { MarriageScene } from './components/scenes/MarriageScene';
 import { SceneTransition } from './components/scenes/SceneTransition';
@@ -59,17 +58,12 @@ export default function App() {
           <div id="events-section" className="space-y-4 pt-1">
             <SceneTransition label={language === 'te' ? 'శుభ ఘట్టాలు • 01' : 'Ceremony Chapter • 01'} />
 
-            {/* Scene 1: Engagement Ceremony (Interlocking Rings) */}
-            <EngagementScene language={language} />
+            {/* Scene 1: Pasupu & Mangala Snanam (Turmeric & Marigolds) */}
+            <HaldiScene language={language} />
 
             <SceneTransition label={language === 'te' ? 'శుభ ఘట్టాలు • 02' : 'Ceremony Chapter • 02'} />
 
-            {/* Scene 2: Pasupu & Mangala Snanam (Turmeric & Marigolds) */}
-            <HaldiScene language={language} />
-
-            <SceneTransition label={language === 'te' ? 'శుభ ఘట్టాలు • 03' : 'Ceremony Chapter • 03'} />
-
-            {/* Scene 3: Kalyana Mahotsavam (Mangala Vadyalu & Mandapam) */}
+            {/* Scene 2: Kalyana Mahotsavam (Mangala Vadyalu & Mandapam) */}
             <MarriageScene language={language} />
           </div>
 

@@ -67,7 +67,7 @@ export const HaldiScene: React.FC<HaldiSceneProps> = ({ language }) => {
           <div className="flex items-center space-x-2">
             <span className="text-2xl" role="img" aria-label="Flower">🌼</span>
             <span className="text-[17px] sm:text-[18px] uppercase tracking-wide text-[#925400] font-black font-telugutitle">
-              02 • {t.event_haldi_tag}
+              01 • {t.event_haldi_tag}
             </span>
           </div>
           <span className="text-[16px] sm:text-[17px] font-black px-3.5 py-1 rounded-full bg-amber-100 text-amber-950">
