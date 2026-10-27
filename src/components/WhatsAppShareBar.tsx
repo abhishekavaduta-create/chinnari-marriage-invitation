@@ -20,20 +20,17 @@ export const WhatsAppShareBar: React.FC<WhatsAppShareBarProps> = ({ language }) 
 
   const handleShare = () => {
     const url = getWhatsAppShareUrl(language);
-    if (!url) {
-      announce(t.share_publish_first);
-      return;
-    }
+    // Preview and temporary URLs are intentionally not shareable.
+    // Fail silently so internal preview guidance never interrupts the invitation UI.
+    if (!url) return;
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   const handleCopyLink = async (e: React.MouseEvent) => {
     e.stopPropagation();
     const publicUrl = getPermanentInvitationUrl();
-    if (!publicUrl) {
-      announce(t.share_publish_first);
-      return;
-    }
+    // Never copy an internal preview URL; avoid interrupting guests with a warning banner.
+    if (!publicUrl) return;
 
     try {
       if (typeof navigator !== 'undefined' && navigator.clipboard) {
