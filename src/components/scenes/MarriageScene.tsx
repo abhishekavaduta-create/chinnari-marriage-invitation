@@ -68,7 +68,7 @@ export const MarriageScene: React.FC<MarriageSceneProps> = ({ language }) => {
           <div className="flex items-center space-x-2">
             <span className="text-2xl" role="img" aria-label="Deepam">🪔</span>
             <span className="text-[17px] sm:text-[18px] uppercase tracking-wide text-[#7B1E2B] font-black font-telugutitle">
-              03 • {t.event_marriage_tag}
+              02 • {t.event_marriage_tag}
             </span>
           </div>
           <span className="text-[16px] sm:text-[17px] font-black px-3.5 py-1 rounded-full bg-red-100 text-[#7B1E2B]">
