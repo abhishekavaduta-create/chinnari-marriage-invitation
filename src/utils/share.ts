@@ -17,7 +17,7 @@ const withoutTrailingSlash = (value: string): string =>
 // fresh page URL instead of reusing a previously cached text-only preview.
 const withSharePreviewVersion = (value: string): string => {
   const url = new URL(value);
-  url.searchParams.set('share', '2');
+  url.searchParams.set('share', '3');
   return url.toString();
 };
 
@@ -59,8 +59,8 @@ export function getWhatsAppShareUrl(lang: Language): string | null {
 
   const message =
     lang === 'te'
-      ? "శ్రీ లక్ష్మీ నరసింహ స్వామి ఆశీస్సులతో... చి॥ల॥సౌ॥ అవధూత ధనలక్ష్మి & చి॥ పున్నా శేఖర్ ల కల్యాణ మహోత్సవ ఆహ్వాన పత్రిక. వేదిక & ముహూర్తం వివరాల కొరకు చూడండి: "
-      : "With the Divine Blessings of Sri Lakshmi Narasimha Swamy, you are cordially invited to celebrate the wedding ceremony of Chi. La. Sow. Avaduta Dhanlaxmi & Chi. Punna Shekar: ";
+      ? "శ్రీ లక్ష్మీ నరసింహ స్వామి ఆశీస్సులతో 🙏\\nఅవధూత ధనలక్ష్మి & పున్నా శేఖర్‌ల వివాహానికి మీకు, మీ కుటుంబానికి హృదయపూర్వక ఆహ్వానం.\\n📅 ఆదివారం, 15 నవంబర్ 2026 • ఉదయం 9:58\\nవేదిక, ముహూర్తం వివరాల కోసం ఆహ్వాన పత్రిక చూడండి:\\n"
+      : "With the blessings of Sri Lakshmi Narasimha Swamy 🙏\\nYou and your family are warmly invited to the wedding of Avaduta Dhanlaxmi & Punna Shekar.\\n📅 Sunday, 15 November 2026 • 9:58 AM\\nView the invitation for venue and ceremony details:\\n";
 
   const fullText = message + publicUrl;
   return 'https://api.whatsapp.com/send?text=' + encodeURIComponent(fullText);
