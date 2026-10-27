@@ -59,8 +59,8 @@ export function getWhatsAppShareUrl(lang: Language): string | null {
 
   const message =
     lang === 'te'
-      ? "శ్రీ లక్ష్మీ నరసింహ స్వామి ఆశీస్సులతో 🙏\\nఅవధూత ధనలక్ష్మి & పున్నా శేఖర్‌ల వివాహానికి మీకు, మీ కుటుంబానికి హృదయపూర్వక ఆహ్వానం.\\n📅 ఆదివారం, 15 నవంబర్ 2026 • ఉదయం 9:58\\nవేదిక, ముహూర్తం వివరాల కోసం ఆహ్వాన పత్రిక చూడండి:\\n"
-      : "With the blessings of Sri Lakshmi Narasimha Swamy 🙏\\nYou and your family are warmly invited to the wedding of Avaduta Dhanlaxmi & Punna Shekar.\\n📅 Sunday, 15 November 2026 • 9:58 AM\\nView the invitation for venue and ceremony details:\\n";
+      ? "శ్రీ లక్ష్మీ నరసింహ స్వామి ఆశీస్సులతో 🙏\nఅవధూత ధనలక్ష్మి & పున్నా శేఖర్‌ల వివాహానికి మీకు, మీ కుటుంబానికి హృదయపూర్వక ఆహ్వానం.\n📅 ఆదివారం, 15 నవంబర్ 2026 • ఉదయం 9:58\nవేదిక, ముహూర్తం వివరాల కోసం ఆహ్వాన పత్రిక చూడండి:\n"
+      : "With the blessings of Sri Lakshmi Narasimha Swamy 🙏\nYou and your family are warmly invited to the wedding of Avaduta Dhanlaxmi & Punna Shekar.\n📅 Sunday, 15 November 2026 • 9:58 AM\nView the invitation for venue and ceremony details:\n";
 
   const fullText = message + publicUrl;
   return 'https://api.whatsapp.com/send?text=' + encodeURIComponent(fullText);
