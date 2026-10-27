@@ -11,13 +11,6 @@ interface WhatsAppShareBarProps {
 export const WhatsAppShareBar: React.FC<WhatsAppShareBarProps> = ({ language }) => {
   const t = translations[language];
   const [copied, setCopied] = useState(false);
-  const [notice, setNotice] = useState('');
-
-  const announce = (message: string) => {
-    setNotice(message);
-    window.setTimeout(() => setNotice(''), 3500);
-  };
-
   const handleShare = () => {
     const url = getWhatsAppShareUrl(language);
     // Preview and temporary URLs are intentionally not shareable.
@@ -36,7 +29,6 @@ export const WhatsAppShareBar: React.FC<WhatsAppShareBarProps> = ({ language }) 
       if (typeof navigator !== 'undefined' && navigator.clipboard) {
         await navigator.clipboard.writeText(publicUrl);
         setCopied(true);
-        announce(t.share_copied);
         window.setTimeout(() => setCopied(false), 2500);
       }
     } catch {
@@ -49,15 +41,6 @@ export const WhatsAppShareBar: React.FC<WhatsAppShareBarProps> = ({ language }) 
       className="fixed bottom-0 left-0 right-0 z-50 flex flex-col items-center gap-2 px-3 pb-3 pointer-events-none"
       aria-label="Invitation sharing"
     >
-      {notice && (
-        <p
-          role="status"
-          className="w-full max-w-lg rounded-xl border border-[#C6A15B] bg-[#FFF8EF]/95 px-4 py-2.5 text-center text-sm font-semibold text-[#58111D] shadow-lg"
-        >
-          {notice}
-        </p>
-      )}
-
       <div className="w-full max-w-lg bg-white/95 backdrop-blur-md border border-[#C6A15B] rounded-2xl p-2.5 flex items-center gap-2 shadow-xl pointer-events-auto">
         <button
           type="button"
