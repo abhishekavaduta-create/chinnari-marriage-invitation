@@ -106,8 +106,8 @@ export const extendedFamilyMembers: ExtendedFamilyMember[] = [
   {
     id: 'mangalapalli',
     names: {
-      en: 'Mangalapalli Chandra Mohan & Mangapalli Srikala',
-      te: 'మంగళపల్లి చంద్ర మోహన్ & మంగపల్లి శ్రీకళ'
+      en: 'Mangalapalli Chandra Mohan & Mangalapalli Srikala',
+      te: 'మంగళపల్లి చంద్ర మోహన్ & మంగళపల్లి శ్రీకళ'
     }
   },
   {
