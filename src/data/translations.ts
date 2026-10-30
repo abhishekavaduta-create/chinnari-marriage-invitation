@@ -157,7 +157,7 @@ export const translations = {
     event_haldi_tag: "Haldi Ceremony",
     haldi_date: "Friday, 13 November 2026",
     haldi_time: "4:00 PM Onwards",
-    haldi_venue_name: "Family Residence",
+    haldi_venue_name: "Avaduta’s Residency",
     haldi_venue_address: "18-3-747, Beside Sanjeev Prasad Hospital, Aliyabad, Hyderabad – 500053, Telangana.",
     btn_set_reminder: "Set Reminder",
 
